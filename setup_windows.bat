@@ -9,6 +9,6 @@ if %errorlevel% neq 0 (
     set "PATH=%UserProfile%\miniconda3\Scripts;%UserProfile%\miniconda3\condabin;%PATH%"
 )
 echo Creating the environment...
-call conda env create -f environment.yml --yes
+call conda env create -f environment.yml
 echo Done!
 pause

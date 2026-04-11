@@ -11,5 +11,5 @@ if ! command -v conda &> /dev/null; then
     source "$HOME/miniconda/bin/activate"
     conda init zsh
 fi
-conda env create -f environment.yml --yes
+conda env create -f environment.yml
 echo "Done! Restart your terminal to begin."
