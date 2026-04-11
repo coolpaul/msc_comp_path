@@ -1,15 +1,36 @@
 #!/bin/bash
 cd "$(dirname "$0")"
-if ! command -v conda &> /dev/null; then
-    echo "Installing Miniconda..."
-    ARCH=$(uname -m)
-    OS_TYPE="MacOSX"
-    [[ "$ARCH" == "arm64" ]] && INSTALLER="Miniconda3-latest-${OS_TYPE}-arm64.sh" || INSTALLER="Miniconda3-latest-${OS_TYPE}-x86_64.sh"
-    curl -O "https://repo.anaconda.com/miniconda/$INSTALLER"
-    bash "$INSTALLER" -b -p "$HOME/miniconda"
-    rm "$INSTALLER"
-    source "$HOME/miniconda/bin/activate"
-    conda init zsh
-fi
+ARCH=$(uname -m)
+
+echo "--- Starting Msc Computational Pathology Setup ---"
+
+# 1. VS Code (Auto-detects Apple Silicon vs Intel)
+echo "Installing VS Code..."
+curl -L "https://update.code.visualstudio.com/latest/darwin$( [[ "$ARCH" == "arm64" ]] && echo "-arm64" )/stable" -o vscode.zip
+unzip -q vscode.zip && mv "Visual Studio Code.app" /Applications && rm vscode.zip
+
+# 2. Quarto
+echo "Installing Quarto..."
+curl -L "https://github.com/quarto-dev/quarto-cli/releases/download/v1.9.36/quarto-1.9.36-macos.pkg" -o quarto.pkg
+sudo installer -pkg quarto.pkg -target /
+rm quarto.pkg
+
+# 3. Zotero
+echo "Installing Zotero..."
+curl -L "https://www.zotero.org/download/client/dl?channel=release&platform=mac$( [[ "$ARCH" == "arm64" ]] && echo "" )" -o zotero.dmg
+hdiutil mount zotero.dmg -quiet
+cp -R "/Volumes/Zotero/Zotero.app" /Applications
+hdiutil unmount "/Volumes/Zotero"
+rm zotero.dmg
+
+# 4. QuPath
+[[ "$ARCH" == "arm64" ]] && Q_VER="arm64" || Q_VER="x64"
+curl -L "https://github.com/qupath/qupath/releases/download/v0.7.0/QuPath-v0.7.0-Mac-$Q_VER.pkg" -o qupath.pkg
+sudo installer -pkg qupath.pkg -target /
+rm qupath.pkg
+
+# 5. Conda Environment
+echo "Building Conda environment..."
 conda env create -f environment.yml
-echo "Done! Restart your terminal to begin."
+
+echo "--- DONE! Please restart your Terminal. ---"

@@ -4,14 +4,27 @@ channels:
   - pytorch
 dependencies:
   - python=3.12
-  - numpy
-  - pandas
-  - matplotlib
-  - plotnine
-  - seaborn
-  - scipy
-  - ultralytics  # For YOLO
-  - jupyterlab
+  # Core Data Science & Statistics
+  - numpy            # Numerical computing (arrays/matrices)
+  - scipy            # Advanced scientific & statistical functions
+  - pandas           # Data manipulation and CSV analysis
+  - scikit-learn     # Model evaluation (Confusion matrices, ROC curves)
+  
+  # Visualization & Reporting
+  - matplotlib       # Standard plotting library
+  - seaborn          # Statistical data visualization (built on matplotlib)
+  - plotnine         # "Grammar of Graphics" (equivalent to R's ggplot2)
+  - plotly           # Interactive graphs (excellent for Quarto reports)
+  - jupyterlab       # The interactive backend for Quarto & Python
+  
+  # Computer Vision & Annotation
+  - pyqt=5           # Required for labelImg graphical interface
+  - lxml             # Required for labelImg XML file handling
+  
   - pip
   - pip:
-    - opencv-python
+    - ultralytics    # YOLO Engine (Latest 2026 build)
+    - opencv-python  # Image/Video frame processing
+    - labelImg       # Tool for drawing bounding boxes on images
+
+    
