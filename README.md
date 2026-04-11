@@ -1,4 +1,4 @@
-# msc_comp_path: Computational Pathology Course
+# Computational Pathology Course
 
 🚀 **Welcome!** 
 
