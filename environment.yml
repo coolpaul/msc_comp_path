@@ -1,0 +1,17 @@
+name: msc_comp_path
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.12
+  - numpy
+  - pandas
+  - matplotlib
+  - plotnine
+  - seaborn
+  - scipy
+  - ultralytics  # For YOLO
+  - jupyterlab
+  - pip
+  - pip:
+    - opencv-python
