@@ -36,7 +36,7 @@ setup_windows.bat
 
 ### **For Mac Users**
 
-Run these two commands in your terminal:
+Run this command in your terminal:
 
 ```bash
 ./setup_mac.command
