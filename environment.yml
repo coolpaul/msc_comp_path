@@ -3,28 +3,35 @@ channels:
   - conda-forge
   - pytorch
 dependencies:
-  - python=3.12
-  # Core Data Science & Statistics
-  - numpy            # Numerical computing (arrays/matrices)
-  - scipy            # Advanced scientific & statistical functions
-  - pandas           # Data manipulation and CSV analysis
-  - scikit-learn     # Model evaluation (Confusion matrices, ROC curves)
+  - python=3.12      # Python 3.12
   
-  # Visualization & Reporting
-  - matplotlib       # Standard plotting library
-  - seaborn          # Statistical data visualization (built on matplotlib)
-  - plotnine         # "Grammar of Graphics" (equivalent to R's ggplot2)
-  - plotly           # Interactive graphs (excellent for Quarto reports)
-  - jupyterlab       # The interactive backend for Quarto & Python
+  # Core Data Science & Math
+  - numpy            # Numerical computing
+  - scipy            # Advanced scientific stats
+  - pandas           # Dataframes
+  - scikit-learn     # Model evaluation (Confusion matrices, ML, etc.)
   
-  # Computer Vision & Annotation
-  - pyqt=5           # Required for labelImg graphical interface
-  - lxml             # Required for labelImg XML file handling
+  # Visualization
+  - matplotlib       # Basic plotting
+  - seaborn          # Statistical visualization
+  - plotnine         # Grammar of Graphics (ggplot2 style)
+  - plotly           # Interactive graphs for Quarto
   
+  # Digital Pathology & Image Processing
+  - openslide-python # Reads Whole Slide Images (SVS, NDPI, etc.)
+  - scikit-image     # Standard image processing algorithms
+  - tifffile         # Essential for reading large/complex medical TIFFs
+  - imagecodecs      # Required for decoding compressed medical images
+  
+  # Environment & App Dependencies
+  - jupyterlab       # Backend engine for notebooks/Quarto
+  - pyqt=5           # Required for labelImg UI
+  - lxml             # Required for labelImg XML
+  
+  # Pip packages 
   - pip
   - pip:
-    - ultralytics    # YOLO Engine (Latest 2026 build)
-    - opencv-python  # Image/Video frame processing
-    - labelImg       # Tool for drawing bounding boxes on images
-
-    
+    - ultralytics    # YOLO Engine
+    - huggingface_hub # Required for YOLOv10+ architecture
+    - opencv-python  # Fast video/webcam frame processing
+    - labelImg       # Annotation tool

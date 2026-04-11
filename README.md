@@ -51,7 +51,7 @@ Once the scripts finish, **restart your terminal** and run these checks to ensur
 
 ```bash
 conda activate msc_comp_path
-python -c "import ultralytics, cv2, plotnine, sklearn, pandas, scipy, numpy; print('✅ All Systems Go!')"
+python -c "import sys, ultralytics, openslide, cv2, plotnine, sklearn, pandas, scipy, numpy; print('✅ All set up on Python {sys.version.split()[0]}!')"
 ```
 
 ### 2. Check Reporting Tools (Quarto)
