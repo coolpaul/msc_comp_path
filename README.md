@@ -1,6 +1,10 @@
 # msc_comp_path: Computational Pathology Course
 
-🚀 **Welcome!** This repository contains the environment and tools for the MSc Computational Pathology course. Please follow these steps to prepare your laptop **before** the first session.
+🚀 **Welcome!** 
+
+This repository contains the environment and tools for the MSc Computational Pathology course. 
+
+Please follow these steps to prepare your laptop **before** the first session.
 
 ---
 
@@ -14,7 +18,7 @@
 Open your Terminal (Mac) or Command Prompt (Windows) and run the following commands:
 
 ```bash
-git clone [https://github.com/coolpaul/msc_comp_path.git](https://github.com/coolpaul/msc_comp_path.git)
+git clone https://github.com/coolpaul/msc_comp_path.git
 cd msc_comp_path
 ```
 
@@ -35,7 +39,6 @@ setup_windows.bat
 Run these two commands in your terminal:
 
 ```bash
-chmod +x setup_mac.command
 ./setup_mac.command
 ```
 *(Note: You will be prompted for your Mac password. The cursor will stay still while you type—this is normal.)*
