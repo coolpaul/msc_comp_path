@@ -50,8 +50,8 @@ def read_svs_file_divide_patches(svs_file=None, patch_size=None, level=0, min_pi
 
 if __name__ == "__main__":
 
-    input_dir = "../data/wsi/"
-    output_dir = "../data/patches/"
+    input_dir = "../data/wsi/wsi_1/"
+    output_dir = "../data/wsi/wsi_1/patches/"
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)

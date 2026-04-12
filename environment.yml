@@ -35,3 +35,6 @@ dependencies:
     - huggingface_hub # Required for YOLOv10+ architecture
     - opencv-python  # Fast video/webcam frame processing
     - labelImg       # Annotation tool
+    - pillow	     # image processing
+    - python-gdcm    # required for pydicom
+    - pydicom        # to show dicom files
