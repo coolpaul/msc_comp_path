@@ -1,0 +1,102 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Msc Computational Pathology",
+    "section": "",
+    "text": "Preface\nThis is a guidance for the UCL MSc in computational pathology course.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "chapter_1.html",
+    "href": "chapter_1.html",
+    "title": "1  Introduction, setup, legal aspects, coding principles and installation",
+    "section": "",
+    "text": "1.1 Introduction",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction, setup, legal aspects, coding principles and installation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_1.html#setup-of-course",
+    "href": "chapter_1.html#setup-of-course",
+    "title": "1  Introduction, setup, legal aspects, coding principles and installation",
+    "section": "1.2 Setup of course",
+    "text": "1.2 Setup of course",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction, setup, legal aspects, coding principles and installation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_1.html#legal-aspects",
+    "href": "chapter_1.html#legal-aspects",
+    "title": "1  Introduction, setup, legal aspects, coding principles and installation",
+    "section": "1.3 Legal aspects",
+    "text": "1.3 Legal aspects",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction, setup, legal aspects, coding principles and installation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_1.html#coding-principles",
+    "href": "chapter_1.html#coding-principles",
+    "title": "1  Introduction, setup, legal aspects, coding principles and installation",
+    "section": "1.4 Coding principles",
+    "text": "1.4 Coding principles\n\n1.4.1 why coding / scripts\n\n\n1.4.2 \n\n\n1.4.3 Installation of software\nInstall the software to help with the course.\n\n1.4.3.1 Software\n\nInstall Miniconda and create an environment\nCreate a conda environment if required\nInstall Quarto\nInstall Microsoft Visual Studio\nInstall Python version 3.12\nHow to install Python packages\n\nnumpy numerical computing\nscipy advanced scientific stats\npandas dataframes\nscikitlearn model evaluation; confusion matrices etc\nopenslide reads whole pathology slide images (svs etc)\nscikit-image Standard image processing\ntifffile processing of large medical tiffs\nimagecodecs for decoding compressed medical images\nmatplotlib basic plotting\nseaborn statistical visualisation\nplotnine grammar of graphics (ggplot2 style)\nplotly interactive plots for Quarto\njupyterlab engine for notebooks / quarto\npyqt=5 for labelImg UI\nlxml for labelImg XML\nultralytics for YOLO\nhuggingface_hub for yolo 10+c\nopencv-python image processing\nlabelImg / https://github.com/HumanSignal/labelImg annotation software\nPillow # image processing\nPython-gdcm # needed for pydicom\nPydicom # to read dicom files\n\nInstall QuPath to view digital histopathology slides\nInstall Zotero reference manager",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction, setup, legal aspects, coding principles and installation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_1.html#excercise",
+    "href": "chapter_1.html#excercise",
+    "title": "1  Introduction, setup, legal aspects, coding principles and installation",
+    "section": "1.5 Excercise",
+    "text": "1.5 Excercise\nThe NHS number is a 10 digit number where the 10th digit is internally validated using a modulus-11 algorithm. This is done in five steps:\n\nEach number is weighted\n\nThe first number is multiplied by ten, the second by nine, the third by eight, the fourth by seven, the fifth by six, the sixth by five, the seventh by four, the eighth by three and the ninth by two.\n\nThe results of each multiplication are added\nThe sum is divided by 11 and the remainder is found\nThe remainder is subtracted from 11 to give the check digit\n\nIf the result is 11, the check digit is 0\nIf the result is 10, the NHS number is invalid and not used\n\nCheck the remainder matches the check digit\n\nFor example: 987 123 4562\n\n9x10 + 8x9 + 7x8 + 1x7 + 2x6 + 3x5 + 4x4 + 5x3 + 6x2\nthe sum is 295\n295 : 11 = 26 remainder 9\nthe check digit is 11 - 9 = 2\nthe NHS number is valid\n\nThere are online checkers you can use\nWrite a Python function that checks if a NHS number if valid. The function should take a single input (argument), remove spaces or hyphens, check it is 10 digits long and output ‘valid’ or ‘invalid’ as appropriate.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction, setup, legal aspects, coding principles and installation</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "9  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "software.html",
+    "href": "software.html",
+    "title": "10  Course Software",
+    "section": "",
+    "text": "To install software for the course goto github\nTo remove a Conda environment: conda env remove -n msc_comp_path",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Course Software</span>"
+    ]
+  },
+  {
+    "objectID": "packages.html",
+    "href": "packages.html",
+    "title": "11  Software and Packages",
+    "section": "",
+    "text": "Package\nVersion\n\n\n\n\nIPython\n8.4.0\n\n\nPython\n3.9.13\n\n\ngreat_tables\nunknown\n\n\nmatplotlib\n3.5.3\n\n\nnumpy\n1.23.2\n\n\nos\nunknown\n\n\npandas\n1.4.3\n\n\nplotnine\nunknown\n\n\nscikit-learn\n1.1.2\n\n\nscipy\n1.9.0\n\n\nseaborn\nunknown\n\n\nshap\nunknown\n\n\nstatsmodels\nunknown",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Software and Packages</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Wickham, Hadley. 2010. “A Layered Grammar of\nGraphics.” Journal of Computational and\nGraphical Statistics 19 (1): 3–28. https://doi.org/10.1198/jcgs.2009.07098.\n\n\n———. 2014. “Tidy Data.” Journal of\nStatistical Software 59 (10). https://doi.org/10.18637/jss.v059.i10.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]
