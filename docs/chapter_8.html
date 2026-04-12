@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Chapter 8 – Msc Computational Pathology</title>
+<title>8&nbsp; Reference Manager, Quarto, Reproducible Research – Msc Computational Pathology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -83,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter_8.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 8</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter_8.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reference Manager, Quarto, Reproducible Research</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -117,55 +137,55 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction, setup, legal aspects, coding principles and installation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction, Setup, Legal aspects, Coding Principles and Installation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Chapter 2</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Hardware, Operating Systems, Scanners, File Formats, Software</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 3</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data, Storage, Backup, Databases, Dataframes</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 4</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 5</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Objects, Labelling, GeoJSON, Annotation formats</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 6</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Model forming</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 7</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Statistics, Model Evaluation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_8.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 8</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reference Manager, Quarto, Reproducible Research</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Survey</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -191,15 +211,24 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#reference-manager" id="toc-reference-manager" class="nav-link active" data-scroll-target="#reference-manager"><span class="header-section-number">8.1</span> Reference manager</a></li>
+  <li><a href="#quarto-project" id="toc-quarto-project" class="nav-link" data-scroll-target="#quarto-project"><span class="header-section-number">8.2</span> Quarto project</a></li>
+  <li><a href="#reproducible-research" id="toc-reproducible-research" class="nav-link" data-scroll-target="#reproducible-research"><span class="header-section-number">8.3</span> Reproducible research</a></li>
+  <li><a href="#excercise" id="toc-excercise" class="nav-link" data-scroll-target="#excercise"><span class="header-section-number">8.4</span> Excercise</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 8</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reference Manager, Quarto, Reproducible Research</span></h1>
 </div>
 
 
@@ -216,8 +245,50 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="reference-manager" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="reference-manager"><span class="header-section-number">8.1</span> Reference manager</h2>
+<p>In Zotero, create a collection to store your references for the project. Make sure the Better BibTeX plugin for Zotero is installed. Right click on the collection in Zotero and select ‘export collection’. Next, select Better BibTeX and make sure the ‘keep updated’ box is ticked and save to the project directory as references.bib. This makes sure the file remains updated when you add references to Zotero, without having to ‘re-export’ the collection.</p>
+<p>You can cite a paper by using the Better BibTex identifier (i.e.&nbsp;wickhamTidyData2014) after an @ sign <span class="citation" data-cites="wickhamTidyData2014">Wickham (<a href="references.html#ref-wickhamTidyData2014" role="doc-biblioref">2014</a>)</span>.</p>
+</section>
+<section id="quarto-project" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="quarto-project"><span class="header-section-number">8.2</span> Quarto project</h2>
+<p>To create Quarto project: <a href="https://quarto.org/docs/books" class="uri">https://quarto.org/docs/books</a>.</p>
+<ul>
+<li>-&gt; file -&gt; New File -&gt; Quarto Project -&gt; Book (or website etc..)</li>
+<li>You can edit the _quarto.yml file as desired</li>
+</ul>
+<p>To open the the project:</p>
+<ul>
+<li>Open the directory in MS Visual Studio</li>
+</ul>
+<p>To render the whole book:</p>
+<ul>
+<li>run ‘quarto render’ in terminal</li>
+</ul>
+<p>To render a single qmd file:</p>
+<ul>
+<li>open the file and ‘CMD+Shift+K’</li>
+</ul>
+</section>
+<section id="reproducible-research" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="reproducible-research"><span class="header-section-number">8.3</span> Reproducible research</h2>
+<p>Please refer to <a href="papers/reproducible_research.pdf">Reproducible research</a></p>
+<p>Please refer to <a href="papers/rules.pdf">Rules</a></p>
+<p>Document all the software used, including its version.</p>
+<p>List in requirements.txt file</p>
+<p><a href="./packages.html">Example</a></p>
+</section>
+<section id="excercise" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="excercise"><span class="header-section-number">8.4</span> Excercise</h2>
+<p>Render a single PDF and Word Document from the analysis <a href="./chapter_7.html">done</a>. The files should contain references and data should be processed within the document. Do not copy and paste any information.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-wickhamTidyData2014" class="csl-entry" role="listitem">
+Wickham, Hadley. 2014. <span>“Tidy <span>Data</span>.”</span> <em>Journal of Statistical Software</em> 59 (10). <a href="https://doi.org/10.18637/jss.v059.i10">https://doi.org/10.18637/jss.v059.i10</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -622,13 +693,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./chapter_7.html" class="pagination-link" aria-label="Chapter 7">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 7</span></span>
+      <a href="./chapter_7.html" class="pagination-link" aria-label="Statistics, Model Evaluation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Statistics, Model Evaluation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link" aria-label="Summary">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./summary.html" class="pagination-link" aria-label="Survey">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Survey</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

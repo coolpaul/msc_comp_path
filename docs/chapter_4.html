@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Chapter 4 – Msc Computational Pathology</title>
+<title>4&nbsp; Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation – Msc Computational Pathology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter_4.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 4</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter_4.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -117,55 +117,55 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction, setup, legal aspects, coding principles and installation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction, Setup, Legal aspects, Coding Principles and Installation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Chapter 2</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Hardware, Operating Systems, Scanners, File Formats, Software</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 3</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data, Storage, Backup, Databases, Dataframes</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_4.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 4</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 5</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Objects, Labelling, GeoJSON, Annotation formats</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 6</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Model forming</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 7</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Statistics, Model Evaluation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 8</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reference Manager, Quarto, Reproducible Research</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Survey</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -191,15 +191,29 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#images" id="toc-images" class="nav-link active" data-scroll-target="#images"><span class="header-section-number">4.1</span> Images</a>
+  <ul class="collapse">
+  <li><a href="#formats" id="toc-formats" class="nav-link" data-scroll-target="#formats"><span class="header-section-number">4.1.1</span> Formats</a></li>
+  </ul></li>
+  <li><a href="#convolutional-networks" id="toc-convolutional-networks" class="nav-link" data-scroll-target="#convolutional-networks"><span class="header-section-number">4.2</span> Convolutional Networks</a></li>
+  <li><a href="#image-processing" id="toc-image-processing" class="nav-link" data-scroll-target="#image-processing"><span class="header-section-number">4.3</span> Image Processing</a></li>
+  <li><a href="#stain-normalisation" id="toc-stain-normalisation" class="nav-link" data-scroll-target="#stain-normalisation"><span class="header-section-number">4.4</span> Stain Normalisation</a></li>
+  <li><a href="#image-augmentation" id="toc-image-augmentation" class="nav-link" data-scroll-target="#image-augmentation"><span class="header-section-number">4.5</span> Image Augmentation</a></li>
+  <li><a href="#excercise" id="toc-excercise" class="nav-link" data-scroll-target="#excercise"><span class="header-section-number">4.6</span> Excercise</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 4</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation</span></h1>
 </div>
 
 
@@ -216,8 +230,45 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="images" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="images"><span class="header-section-number">4.1</span> Images</h2>
+<section id="formats" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="formats"><span class="header-section-number">4.1.1</span> Formats</h3>
+<ul>
+<li>Vector
+<ul>
+<li>Scalable vector graphics, PDF</li>
+</ul></li>
+<li>Raster
+<ul>
+<li>RAW, TIFF, BMP, PNG, JPG</li>
+<li>Compression</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="convolutional-networks" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="convolutional-networks"><span class="header-section-number">4.2</span> Convolutional Networks</h2>
+<p><a href="./images/conv_1.png">Convolutional Kernel</a> <a href="./images/conv_2_kernels.png">Kernels</a> <a href="./images/conv_3_show.png">Feature Identification</a> <a href="./images/conv_4_relu.png">RELU</a> <a href="./images/conv_5_pool.png">POOL</a></p>
+</section>
+<section id="image-processing" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="image-processing"><span class="header-section-number">4.3</span> Image Processing</h2>
+<p>Converting, clipping, stain normalisation is also processing</p>
+</section>
+<section id="stain-normalisation" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="stain-normalisation"><span class="header-section-number">4.4</span> Stain Normalisation</h2>
+<p><a href="papers/macenko2009.pdf">Machenko</a></p>
+</section>
+<section id="image-augmentation" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="image-augmentation"><span class="header-section-number">4.5</span> Image Augmentation</h2>
+<p>Rotating, flip, inverse, shift etc, to highlight features</p>
+</section>
+<section id="excercise" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="excercise"><span class="header-section-number">4.6</span> Excercise</h2>
+<p>Normalize (<a href="papers/macenko2009.pdf">Machenko</a>) the <a href="https://github.com/coolpaul/msc_comp_path/tree/main/data/wsi/wsi_1">svs file</a> for staining using code (not with qupath)</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -622,13 +673,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./chapter_3.html" class="pagination-link" aria-label="Chapter 3">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 3</span></span>
+      <a href="./chapter_3.html" class="pagination-link" aria-label="Data, Storage, Backup, Databases, Dataframes">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data, Storage, Backup, Databases, Dataframes</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./chapter_5.html" class="pagination-link" aria-label="Chapter 5">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 5</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./chapter_5.html" class="pagination-link" aria-label="Objects, Labelling, GeoJSON, Annotation formats">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Objects, Labelling, GeoJSON, Annotation formats</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

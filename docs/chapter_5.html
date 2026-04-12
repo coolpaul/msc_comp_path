@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Chapter 5 – Msc Computational Pathology</title>
+<title>5&nbsp; Objects, Labelling, GeoJSON, Annotation formats – Msc Computational Pathology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter_5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 5</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter_5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Objects, Labelling, GeoJSON, Annotation formats</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -117,55 +117,55 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction, setup, legal aspects, coding principles and installation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction, Setup, Legal aspects, Coding Principles and Installation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Chapter 2</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Hardware, Operating Systems, Scanners, File Formats, Software</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 3</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data, Storage, Backup, Databases, Dataframes</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 4</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_5.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 5</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Objects, Labelling, GeoJSON, Annotation formats</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 6</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Model forming</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 7</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Statistics, Model Evaluation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 8</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reference Manager, Quarto, Reproducible Research</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Survey</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -191,15 +191,33 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#objects" id="toc-objects" class="nav-link active" data-scroll-target="#objects"><span class="header-section-number">5.1</span> Objects</a></li>
+  <li><a href="#labelling" id="toc-labelling" class="nav-link" data-scroll-target="#labelling"><span class="header-section-number">5.2</span> Labelling</a>
+  <ul class="collapse">
+  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software"><span class="header-section-number">5.2.1</span> Software</a></li>
+  </ul></li>
+  <li><a href="#geojson" id="toc-geojson" class="nav-link" data-scroll-target="#geojson"><span class="header-section-number">5.3</span> GeoJSON</a></li>
+  <li><a href="#annotation-formats" id="toc-annotation-formats" class="nav-link" data-scroll-target="#annotation-formats"><span class="header-section-number">5.4</span> Annotation Formats</a>
+  <ul class="collapse">
+  <li><a href="#coco" id="toc-coco" class="nav-link" data-scroll-target="#coco"><span class="header-section-number">5.4.1</span> COCO</a></li>
+  <li><a href="#pascal-voc" id="toc-pascal-voc" class="nav-link" data-scroll-target="#pascal-voc"><span class="header-section-number">5.4.2</span> Pascal VOC</a></li>
+  <li><a href="#yolo" id="toc-yolo" class="nav-link" data-scroll-target="#yolo"><span class="header-section-number">5.4.3</span> YOLO</a></li>
+  </ul></li>
+  <li><a href="#excercise" id="toc-excercise" class="nav-link" data-scroll-target="#excercise"><span class="header-section-number">5.5</span> Excercise</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 5</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Objects, Labelling, GeoJSON, Annotation formats</span></h1>
 </div>
 
 
@@ -216,8 +234,45 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="objects" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="objects"><span class="header-section-number">5.1</span> Objects</h2>
+<p><a href="images/classify_localise_segment.jpg">Types</a></p>
+</section>
+<section id="labelling" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="labelling"><span class="header-section-number">5.2</span> Labelling</h2>
+<section id="software" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="software"><span class="header-section-number">5.2.1</span> Software</h3>
+<ul>
+<li><a href="https://qupath.github.io/">QuPath</a></li>
+<li><a href="https://pypi.org/project/labelImg/">labelImg</a> / <a href="https://github.com/HumanSignal/labelImg" class="uri">https://github.com/HumanSignal/labelImg</a> (simpler)</li>
+</ul>
+</section>
+</section>
+<section id="geojson" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="geojson"><span class="header-section-number">5.3</span> GeoJSON</h2>
+<p>File format (open-standard), based on JSON for encoding geographic data. Rules - coordinate order: [longitude, latitude] - polygon is an array of coordinates, where the first and last are identical - supported types - Point - LineString - Polygon - MultiPoint - MultiLineString - MultiPolygon - GeometryCollection</p>
+</section>
+<section id="annotation-formats" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="annotation-formats"><span class="header-section-number">5.4</span> Annotation Formats</h2>
+<section id="coco" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="coco"><span class="header-section-number">5.4.1</span> COCO</h3>
+<p>Absolute pixel coordinates: [xmin, ymin, width, height]</p>
+</section>
+<section id="pascal-voc" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="pascal-voc"><span class="header-section-number">5.4.2</span> Pascal VOC</h3>
+<p>Absolute pixel coordinates: [xmin, ymin, xmax, ymax]</p>
+</section>
+<section id="yolo" class="level3" data-number="5.4.3">
+<h3 data-number="5.4.3" class="anchored" data-anchor-id="yolo"><span class="header-section-number">5.4.3</span> YOLO</h3>
+<p>Normalised (0-1) coordinates: [xcenter, ycenter, width, height]</p>
+</section>
+</section>
+<section id="excercise" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="excercise"><span class="header-section-number">5.5</span> Excercise</h2>
+<p>Convert yolo boxes in the <a href="https://github.com/coolpaul/neutrophils">neutrophil repository</a> to Pascal and COCO format.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -622,13 +677,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./chapter_4.html" class="pagination-link" aria-label="Chapter 4">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 4</span></span>
+      <a href="./chapter_4.html" class="pagination-link" aria-label="Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./chapter_6.html" class="pagination-link" aria-label="Chapter 6">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 6</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./chapter_6.html" class="pagination-link" aria-label="Model forming">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Model forming</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

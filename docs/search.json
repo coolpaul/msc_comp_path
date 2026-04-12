@@ -12,61 +12,451 @@
   {
     "objectID": "chapter_1.html",
     "href": "chapter_1.html",
-    "title": "1  Introduction, setup, legal aspects, coding principles and installation",
+    "title": "1  Introduction, Setup, Legal aspects, Coding Principles and Installation",
     "section": "",
     "text": "1.1 Introduction",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction, setup, legal aspects, coding principles and installation</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction, Setup, Legal aspects, Coding Principles and Installation</span>"
     ]
   },
   {
     "objectID": "chapter_1.html#setup-of-course",
     "href": "chapter_1.html#setup-of-course",
-    "title": "1  Introduction, setup, legal aspects, coding principles and installation",
+    "title": "1  Introduction, Setup, Legal aspects, Coding Principles and Installation",
     "section": "1.2 Setup of course",
     "text": "1.2 Setup of course",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction, setup, legal aspects, coding principles and installation</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction, Setup, Legal aspects, Coding Principles and Installation</span>"
     ]
   },
   {
     "objectID": "chapter_1.html#legal-aspects",
     "href": "chapter_1.html#legal-aspects",
-    "title": "1  Introduction, setup, legal aspects, coding principles and installation",
+    "title": "1  Introduction, Setup, Legal aspects, Coding Principles and Installation",
     "section": "1.3 Legal aspects",
-    "text": "1.3 Legal aspects",
+    "text": "1.3 Legal aspects\nSafety of data and storage\nComputer / server / online - cloud\nPatient confidentiality - Anonymous / pseudo anonymous / depersonalizing - Unique identifier",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction, setup, legal aspects, coding principles and installation</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction, Setup, Legal aspects, Coding Principles and Installation</span>"
     ]
   },
   {
     "objectID": "chapter_1.html#coding-principles",
     "href": "chapter_1.html#coding-principles",
-    "title": "1  Introduction, setup, legal aspects, coding principles and installation",
+    "title": "1  Introduction, Setup, Legal aspects, Coding Principles and Installation",
     "section": "1.4 Coding principles",
-    "text": "1.4 Coding principles\n\n1.4.1 why coding / scripts\n\n\n1.4.2 \n\n\n1.4.3 Installation of software\nInstall the software to help with the course.\n\n1.4.3.1 Software\n\nInstall Miniconda and create an environment\nCreate a conda environment if required\nInstall Quarto\nInstall Microsoft Visual Studio\nInstall Python version 3.12\nHow to install Python packages\n\nnumpy numerical computing\nscipy advanced scientific stats\npandas dataframes\nscikitlearn model evaluation; confusion matrices etc\nopenslide reads whole pathology slide images (svs etc)\nscikit-image Standard image processing\ntifffile processing of large medical tiffs\nimagecodecs for decoding compressed medical images\nmatplotlib basic plotting\nseaborn statistical visualisation\nplotnine grammar of graphics (ggplot2 style)\nplotly interactive plots for Quarto\njupyterlab engine for notebooks / quarto\npyqt=5 for labelImg UI\nlxml for labelImg XML\nultralytics for YOLO\nhuggingface_hub for yolo 10+c\nopencv-python image processing\nlabelImg / https://github.com/HumanSignal/labelImg annotation software\nPillow # image processing\nPython-gdcm # needed for pydicom\nPydicom # to read dicom files\n\nInstall QuPath to view digital histopathology slides\nInstall Zotero reference manager",
+    "text": "1.4 Coding principles\n\nDRY (don’t repeat yourself)\nKISS (keep is small and simple)\nYAGNI (You ain’t gonna need it)\nSOLID\n\nSingle responsibility for each component of code,\nOpen closed (there should be no need to modify code; just add)\nLiskov substitution (If program works with object, should also work with subtypes of that object: rectangle and square)\n\nInterface (Many client-specific interfaces are better than one general)\nDependency (Implementation should be dependent on main logic, not the other way round!)\n\n\n\n1.4.1 why coding / scripts\n\nLeave data untouched\nScript is reproducible and documents what has been done (unlike GUI!)\nUse command line interface (CLI)",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction, setup, legal aspects, coding principles and installation</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction, Setup, Legal aspects, Coding Principles and Installation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_1.html#installation-of-software",
+    "href": "chapter_1.html#installation-of-software",
+    "title": "1  Introduction, Setup, Legal aspects, Coding Principles and Installation",
+    "section": "1.5 Installation of software",
+    "text": "1.5 Installation of software\nInstall the software to help with the course.\n\n1.5.1 Software\n\nInstall Miniconda and create an environment\nCreate a conda environment if required\nInstall Quarto\nInstall Microsoft Visual Studio\nInstall Python version 3.12\nHow to install Python packages\n\nnumpy numerical computing\nscipy advanced scientific stats\npandas dataframes\nscikitlearn model evaluation; confusion matrices etc\nopenslide reads whole pathology slide images (svs etc)\nscikit-image Standard image processing\ntifffile processing of large medical tiffs\nimagecodecs for decoding compressed medical images\nmatplotlib basic plotting\nseaborn statistical visualisation\nplotnine grammar of graphics (ggplot2 style)\nplotly interactive plots for Quarto\njupyterlab engine for notebooks / quarto\npyqt=5 for labelImg UI\nlxml for labelImg XML\nultralytics for YOLO\nhuggingface_hub for yolo 10+c\nopencv-python image processing\nlabelImg / https://github.com/HumanSignal/labelImg annotation software\nPillow # image processing\nPython-gdcm # needed for pydicom\nPydicom # to read dicom files\n\nInstall QuPath to view digital histopathology slides\nInstall Zotero reference manager\n\n\n\n1.5.2 Open Source Software\n\nPropriety (i.e. Philips) has increased costs and you don’t know what has been done\nUse code and alter to suit particular application\nOthers can see what you have done, open / transparent and improves research by dialogue\nuse csv, or tsv; not xlsx!\n\n\n\n1.5.3 Software Conflicts\n\nDifferent versions for different tasks\nConda environments\nPython environments",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction, Setup, Legal aspects, Coding Principles and Installation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_1.html#ide",
+    "href": "chapter_1.html#ide",
+    "title": "1  Introduction, Setup, Legal aspects, Coding Principles and Installation",
+    "section": "1.6 IDE",
+    "text": "1.6 IDE\nIntegrated Development Environment (IDE). MS Visual Studio, R Studio, Quarto, Jupyter, PyCharm.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction, Setup, Legal aspects, Coding Principles and Installation</span>"
     ]
   },
   {
     "objectID": "chapter_1.html#excercise",
     "href": "chapter_1.html#excercise",
-    "title": "1  Introduction, setup, legal aspects, coding principles and installation",
-    "section": "1.5 Excercise",
-    "text": "1.5 Excercise\nThe NHS number is a 10 digit number where the 10th digit is internally validated using a modulus-11 algorithm. This is done in five steps:\n\nEach number is weighted\n\nThe first number is multiplied by ten, the second by nine, the third by eight, the fourth by seven, the fifth by six, the sixth by five, the seventh by four, the eighth by three and the ninth by two.\n\nThe results of each multiplication are added\nThe sum is divided by 11 and the remainder is found\nThe remainder is subtracted from 11 to give the check digit\n\nIf the result is 11, the check digit is 0\nIf the result is 10, the NHS number is invalid and not used\n\nCheck the remainder matches the check digit\n\nFor example: 987 123 4562\n\n9x10 + 8x9 + 7x8 + 1x7 + 2x6 + 3x5 + 4x4 + 5x3 + 6x2\nthe sum is 295\n295 : 11 = 26 remainder 9\nthe check digit is 11 - 9 = 2\nthe NHS number is valid\n\nThere are online checkers you can use\nWrite a Python function that checks if a NHS number if valid. The function should take a single input (argument), remove spaces or hyphens, check it is 10 digits long and output ‘valid’ or ‘invalid’ as appropriate.",
+    "title": "1  Introduction, Setup, Legal aspects, Coding Principles and Installation",
+    "section": "1.7 Excercise",
+    "text": "1.7 Excercise\nThe NHS number is a 10 digit number where the 10th digit is internally validated using a modulus-11 algorithm. This is done in five steps:\n\nEach number is weighted\n\nThe first number is multiplied by ten, the second by nine, the third by eight, the fourth by seven, the fifth by six, the sixth by five, the seventh by four, the eighth by three and the ninth by two.\n\nThe results of each multiplication are added\nThe sum is divided by 11 and the remainder is found\nThe remainder is subtracted from 11 to give the check digit\n\nIf the result is 11, the check digit is 0\nIf the result is 10, the NHS number is invalid and not used\n\nCheck the remainder matches the check digit\n\nFor example: 987 123 4562\n\n9x10 + 8x9 + 7x8 + 1x7 + 2x6 + 3x5 + 4x4 + 5x3 + 6x2\nthe sum is 295\n295 : 11 = 26 remainder 9\nthe check digit is 11 - 9 = 2\nthe NHS number is valid\n\nThere are online checkers you can use\nWrite a Python function that checks if a NHS number if valid. The function should take a single input (argument), remove spaces or hyphens, check it is 10 digits long and output ‘valid’ or ‘invalid’ as appropriate.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction, setup, legal aspects, coding principles and installation</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction, Setup, Legal aspects, Coding Principles and Installation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_2.html",
+    "href": "chapter_2.html",
+    "title": "2  Hardware, Operating Systems, Scanners, File Formats, Software",
+    "section": "",
+    "text": "2.1 Hardware",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hardware, Operating Systems, Scanners, File Formats, Software</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_2.html#hardware",
+    "href": "chapter_2.html#hardware",
+    "title": "2  Hardware, Operating Systems, Scanners, File Formats, Software",
+    "section": "",
+    "text": "2.1.1 CPU\nCentral processing unit\n\n\n2.1.2 GPU\nInitially developed for gaming computers, GPUs are extremely efficient in matrix manipulations. As such, they can be used for processing.\n\n\n2.1.3 RAM\nRapid access memory\n\n\n2.1.4 Out of Memory\n\nBigger computer\nMore RAM\nGPUs\nParallel computing\nData loaders,\nPatching / patch size\nBatching / batch size\n\n\n\n2.1.5 File Storage\n\nDirectory\nSubdirectory\n\n\n2.1.5.1 Hard Drive\nMechanical disk with magnetic storage\n\n\n2.1.5.2 Solid State Drive\nMuch faster, but more limited life span\n\n\n2.1.5.3 USB Drive\nSolid State, USB A and C (faster)\n\n\n2.1.5.4 DVD\nDigital Versatile Disc, Optical, limited capacity\n\n\n2.1.5.5 Tape Drives\nTapes are better for longer storage, but slower to access; good for backup\n\n\n2.1.5.6 Online storage\nInternet connection dependent and also bottle neck. Automated backup, Where are your files? Confidentiality,\n\n\n2.1.5.7 GITHUB\n\nData repositories\nVersion control\nHosting website\nTeam working\n\n\n\n\n2.1.6 Parallel Computing\nUsing several GPUs (or computers) in parallel to improve performance.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hardware, Operating Systems, Scanners, File Formats, Software</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_2.html#operating-systems",
+    "href": "chapter_2.html#operating-systems",
+    "title": "2  Hardware, Operating Systems, Scanners, File Formats, Software",
+    "section": "2.2 Operating Systems",
+    "text": "2.2 Operating Systems\n\n2.2.1 Windows\n\n2.2.1.1 Windows Subsystem for Linux\nYou can run Linux on a Windows machine using Windows Subsystem for Linux, using Windows and Linux side by side. &lt;https://learn.microsoft.com/en-us/windows/wsl/install.\n\n\n\n2.2.2 Linux\nCan run on the same hardware as Windows machines, but the operating system is different and based on Unix.The Unix philosophy has small specialised programs that do one thing extremely well and can be linked together using ‘pipes’ to perform mor complex task. There is a hierarchical file system that treats devices as files, making the environment more powerful.\n\n\n2.2.3 Apple (OSX)\nApple has a Unix operating system, similar to Linux.\n\n2.2.3.1 Intel\nThe Intel processor (x86-64 architecture ) is used on older machines.\n\n\n2.2.3.2 Apple Silicon (ARM; M processors)\nMore recently, Apple developed its own M series (M1 - M5) using RISC architecture focusing on efficiency, power life and high-performance per watt. The Apple Silicon chips integrate the CPU, GPU and RAM together for faster communication (whilst these are separate on Intel systems). Intel based applications can only run on a Apple processor via Rosetta 2 translation.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hardware, Operating Systems, Scanners, File Formats, Software</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_2.html#scanners",
+    "href": "chapter_2.html#scanners",
+    "title": "2  Hardware, Operating Systems, Scanners, File Formats, Software",
+    "section": "2.3 Scanners",
+    "text": "2.3 Scanners\nSeveral scanners are available to scan histology slides. Need to name different ones. Files can be very large and this is dependent on the amount of tissue on the slide. Can easily be 3 - 4 GByte.\n\n2.3.1 Pyramid file structure\nFor example the 3DHistech scanners create mrxs files. An example is included. The advantage is that not the whole slide will need to be downloaded to see a particular patch, but zoom in to what you want to see (ie. google maps). This is particularly useful for diagnostics.\n\n\n2.3.2 Singe file\nLike TIFF and SVS. An example is included. The whole file will need to be downloaded for viewing. The file structure is simpler and this file structure is more suited for machine learning / artificial intelligence where all pixels are required.\n\n\n2.3.3 DICOM\nStandard, but not universal",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hardware, Operating Systems, Scanners, File Formats, Software</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_2.html#viewing-software",
+    "href": "chapter_2.html#viewing-software",
+    "title": "2  Hardware, Operating Systems, Scanners, File Formats, Software",
+    "section": "2.4 Viewing Software",
+    "text": "2.4 Viewing Software\n\n2.4.1 Qupath\nQuPath should be installed with the installer.\n\n\n2.4.2 Openslide\nOpenslide is a Python package that can be used to import files.\n\n\n2.4.3 LabelImg\nLabelImg / https://github.com/HumanSignal/labelImg is software to make simple annotations",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hardware, Operating Systems, Scanners, File Formats, Software</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_2.html#excercise",
+    "href": "chapter_2.html#excercise",
+    "title": "2  Hardware, Operating Systems, Scanners, File Formats, Software",
+    "section": "2.5 Excercise",
+    "text": "2.5 Excercise\nOpen the svs file that is included in the course in Qupath. Select a region of interest (ROI) and annotate some osteoclast like giant cells. Export this region of interest as a geojson file. Import the svs file and geojson file in python and show the region of interest. Save this file as a jpg. Also, using the [create_patches.py]{https://github.com/coolpaul/msc_comp_path/tree/main/code} script you have downloaded to your computer, divide the file into patches. Bonus: stich the file patches back together again.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hardware, Operating Systems, Scanners, File Formats, Software</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_3.html",
+    "href": "chapter_3.html",
+    "title": "3  Data, Storage, Backup, Databases, Dataframes",
+    "section": "",
+    "text": "3.1 Data",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data, Storage, Backup, Databases, Dataframes</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_3.html#data",
+    "href": "chapter_3.html#data",
+    "title": "3  Data, Storage, Backup, Databases, Dataframes",
+    "section": "",
+    "text": "3.1.1 Numerical\n\n3.1.1.1 Discrete\n\n\n3.1.1.2 Continuous\n\n\n\n3.1.2 Non Numerical\n\n3.1.2.1 Binary\n\n\n3.1.2.2 Ordinal\n\n\n3.1.2.3 Categorical\n\n\n\n3.1.3 Dates\nParsing dates is often difficult due to difference in notation: 05/11/2026. In America, this is regarded as 11th May, whilst this is 5th November in UK. In similarity with numbers, it is recommended to use the ISO 8601 standard for dates. The most significant number is on the left.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data, Storage, Backup, Databases, Dataframes</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_3.html#storage",
+    "href": "chapter_3.html#storage",
+    "title": "3  Data, Storage, Backup, Databases, Dataframes",
+    "section": "3.2 Storage",
+    "text": "3.2 Storage\n\n3.2.1 File names\nShould be accessible via a script, logical structure Avoid spaces!\n\n\n3.2.2 Conventions\n\n3.2.2.1 snake_case\n\n\n3.2.2.2 camelCase\n\n\n3.2.2.3 PascalCase\n\n\n3.2.2.4 Others\n\n\n3.2.2.5 Naming\n\nFunction: verb\nVariable: noun\nArgument: CAPITALS",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data, Storage, Backup, Databases, Dataframes</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_3.html#backup",
+    "href": "chapter_3.html#backup",
+    "title": "3  Data, Storage, Backup, Databases, Dataframes",
+    "section": "3.3 Backup",
+    "text": "3.3 Backup\n\n3.3.0.1 Automated\nBest automated as manual not so reliable as you can forget!\n\n\n3.3.1 Rsync\nMethods for backup, only look at changed files\n\n\n3.3.2 RAID\nNot ideal, as in the same housing, in case of fire: all data lost.\n\n\n3.3.3 Off Site\nCloud or drives",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data, Storage, Backup, Databases, Dataframes</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_3.html#databases",
+    "href": "chapter_3.html#databases",
+    "title": "3  Data, Storage, Backup, Databases, Dataframes",
+    "section": "3.4 Databases",
+    "text": "3.4 Databases\n\n3.4.1 Flat File\n\n\n3.4.2 Relational Database\n\n\n3.4.3 Extracting Data\n\n3.4.3.1 SQL",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data, Storage, Backup, Databases, Dataframes</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_3.html#dataframes",
+    "href": "chapter_3.html#dataframes",
+    "title": "3  Data, Storage, Backup, Databases, Dataframes",
+    "section": "3.5 Dataframes",
+    "text": "3.5 Dataframes\n\n3.5.1 Data types\n\nNumerical\n\nInteger\nFloating-point number\nComplex number\n\nCollection data types\n\nSequential collections\n\nString (text)\nList\nTuple\n\nUnordered collection\n\nSet\nDictionary\n\nBoolean\n\n\n\n\n3.5.2 Pandas\nPandas stores data in a dataframe. Every dataframe can have one or more variables. A variable can only contain one category (number, categorical, etc), but there can be many variables in a dataframe each of a different type.\n\n\n3.5.3 Tidy data\nPlease refer to Hadley Wickham’s paper Wickham (2014) Tidy Data or https://r4ds.had.co.nz/tidy-data.html.\n\n\n3.5.4 Grammar of graphics\nIf data are tidy, building plots is usually straight forward using the grammar of graphics.\nFamiliarise yourself with the grammar of graphics to build plots Wickham (2010). A plot is a graphical representation of the data. It requires a minimum of three elements:\n\na tidy dataframe\naesthetic elements\ngeometric element(s)\n\nThe dataframe should be in tidy format to allow ggplot (R) or plotnine (Python) to build the plot. The dataframe contains variables that could be numerical or categorical. The geometric element describes what type of plot is required (histogram, regression plot, box and whisker plot) and is related to the aesthetic element. The aesthetic element describes how the data is mapped on the plot. For example, a histogram only requires a x-axis, a regression plot an x- and y-axis, a box and whisker plot a categorical x-axis and a numerical y-axis. Additionally, variables can be allocated to colour, fill, size, transparancy etc. python",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data, Storage, Backup, Databases, Dataframes</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_3.html#excercise",
+    "href": "chapter_3.html#excercise",
+    "title": "3  Data, Storage, Backup, Databases, Dataframes",
+    "section": "3.6 Excercise",
+    "text": "3.6 Excercise\nTO BE ADDED There are two dataframes in your collection. Link the dataframes and save as a single dataframe. Use this dataframe to create a plot of XXX and YYY.\n\n\n\n\nWickham, Hadley. 2010. “A Layered Grammar of Graphics.” Journal of Computational and Graphical Statistics 19 (1): 3–28. https://doi.org/10.1198/jcgs.2009.07098.\n\n\n———. 2014. “Tidy Data.” Journal of Statistical Software 59 (10). https://doi.org/10.18637/jss.v059.i10.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data, Storage, Backup, Databases, Dataframes</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_4.html",
+    "href": "chapter_4.html",
+    "title": "4  Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation",
+    "section": "",
+    "text": "4.1 Images",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_4.html#images",
+    "href": "chapter_4.html#images",
+    "title": "4  Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation",
+    "section": "",
+    "text": "4.1.1 Formats\n\nVector\n\nScalable vector graphics, PDF\n\nRaster\n\nRAW, TIFF, BMP, PNG, JPG\nCompression",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_4.html#convolutional-networks",
+    "href": "chapter_4.html#convolutional-networks",
+    "title": "4  Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation",
+    "section": "4.2 Convolutional Networks",
+    "text": "4.2 Convolutional Networks\nConvolutional Kernel Kernels Feature Identification RELU POOL",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_4.html#image-processing",
+    "href": "chapter_4.html#image-processing",
+    "title": "4  Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation",
+    "section": "4.3 Image Processing",
+    "text": "4.3 Image Processing\nConverting, clipping, stain normalisation is also processing",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_4.html#stain-normalisation",
+    "href": "chapter_4.html#stain-normalisation",
+    "title": "4  Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation",
+    "section": "4.4 Stain Normalisation",
+    "text": "4.4 Stain Normalisation\nMachenko",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_4.html#image-augmentation",
+    "href": "chapter_4.html#image-augmentation",
+    "title": "4  Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation",
+    "section": "4.5 Image Augmentation",
+    "text": "4.5 Image Augmentation\nRotating, flip, inverse, shift etc, to highlight features",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_4.html#excercise",
+    "href": "chapter_4.html#excercise",
+    "title": "4  Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation",
+    "section": "4.6 Excercise",
+    "text": "4.6 Excercise\nNormalize (Machenko) the svs file for staining using code (not with qupath)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_5.html",
+    "href": "chapter_5.html",
+    "title": "5  Objects, Labelling, GeoJSON, Annotation formats",
+    "section": "",
+    "text": "5.1 Objects\nTypes",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Objects, Labelling, GeoJSON, Annotation formats</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_5.html#labelling",
+    "href": "chapter_5.html#labelling",
+    "title": "5  Objects, Labelling, GeoJSON, Annotation formats",
+    "section": "5.2 Labelling",
+    "text": "5.2 Labelling\n\n5.2.1 Software\n\nQuPath\nlabelImg / https://github.com/HumanSignal/labelImg (simpler)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Objects, Labelling, GeoJSON, Annotation formats</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_5.html#geojson",
+    "href": "chapter_5.html#geojson",
+    "title": "5  Objects, Labelling, GeoJSON, Annotation formats",
+    "section": "5.3 GeoJSON",
+    "text": "5.3 GeoJSON\nFile format (open-standard), based on JSON for encoding geographic data. Rules - coordinate order: [longitude, latitude] - polygon is an array of coordinates, where the first and last are identical - supported types - Point - LineString - Polygon - MultiPoint - MultiLineString - MultiPolygon - GeometryCollection",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Objects, Labelling, GeoJSON, Annotation formats</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_5.html#annotation-formats",
+    "href": "chapter_5.html#annotation-formats",
+    "title": "5  Objects, Labelling, GeoJSON, Annotation formats",
+    "section": "5.4 Annotation Formats",
+    "text": "5.4 Annotation Formats\n\n5.4.1 COCO\nAbsolute pixel coordinates: [xmin, ymin, width, height]\n\n\n5.4.2 Pascal VOC\nAbsolute pixel coordinates: [xmin, ymin, xmax, ymax]\n\n\n5.4.3 YOLO\nNormalised (0-1) coordinates: [xcenter, ycenter, width, height]",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Objects, Labelling, GeoJSON, Annotation formats</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_5.html#excercise",
+    "href": "chapter_5.html#excercise",
+    "title": "5  Objects, Labelling, GeoJSON, Annotation formats",
+    "section": "5.5 Excercise",
+    "text": "5.5 Excercise\nConvert yolo boxes in the neutrophil repository to Pascal and COCO format.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Objects, Labelling, GeoJSON, Annotation formats</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_6.html",
+    "href": "chapter_6.html",
+    "title": "6  Model forming",
+    "section": "",
+    "text": "6.1 Training\nTraining set used to form model and validation set used between different epochs to tune the training parameters. The test set contains data that are unseen by the model and can be used to assess model performance.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Model forming</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_6.html#training",
+    "href": "chapter_6.html#training",
+    "title": "6  Model forming",
+    "section": "",
+    "text": "training set: 80%\nvalidation set: 10%\ntest set: 10%",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Model forming</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_6.html#models",
+    "href": "chapter_6.html#models",
+    "title": "6  Model forming",
+    "section": "6.2 Models",
+    "text": "6.2 Models\nStatistical modelling / Machine learning / Artificial intelligence Supervised learning / unsupervised learning / semi-supervised\nPrinciple component analysis (unsupervised)\n\nRandom forest and others\nDeep learning\nTransfer learning\nComputer vision\n\nConvolutional networks\n\nGoogle foundation models\nLarge language models\n\nPredictor variables (independent) Outcome variables (dependent)\n\n6.2.1 YOLO\nYou only look once. Highly successful algorithm for object detection\nTraining weights, storage, how.\nCan use CLI, or via python. CLI is usually quicker and also allows script files.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Model forming</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_6.html#excercise",
+    "href": "chapter_6.html#excercise",
+    "title": "6  Model forming",
+    "section": "6.3 Excercise",
+    "text": "6.3 Excercise\nTO BE ADDED Create a simple model using the neutrophil repository. Create a training, validation and test set. Train the model and save the weights file.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Model forming</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_7.html",
+    "href": "chapter_7.html",
+    "title": "7  Statistics, Model Evaluation",
+    "section": "",
+    "text": "7.1 Statistics\nCheck out my paper on p values",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Statistics, Model Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_7.html#statistics",
+    "href": "chapter_7.html#statistics",
+    "title": "7  Statistics, Model Evaluation",
+    "section": "",
+    "text": "statistical test\ntest statistic\np value is probability the test statistic takes a more extreme value\naccept or reject null hypothesis",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Statistics, Model Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_7.html#model-evaluation",
+    "href": "chapter_7.html#model-evaluation",
+    "title": "7  Statistics, Model Evaluation",
+    "section": "7.2 Model evaluation",
+    "text": "7.2 Model evaluation\n\n7.2.1 Ground Truth\nWhat is correct?\n\n\n7.2.2 IOU\n\nIOU (intersection over Union)\nmean Average Precision (MAP)\n\n\n\n7.2.3 Performance metrics\n\nAccuracy\nPrecison (positive predictive value)\nRecall (sensitivity)\nno specificity in object detection!\n\nIn object detection: TP, FP and FN, but no TN! - dependent on - confidence - object overlap (50%, or more)\nF1: harmonic mean precision and recall F2: more importance on recall\n\n\n7.2.4 ROC curve\nExplain and can be used to set the best confidence level\n\n\n7.2.5 Other metrics\nFor numerical performance: RMSE\n\n\n7.2.6 Confidence intervals\nNot a probability!",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Statistics, Model Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_7.html#excercise",
+    "href": "chapter_7.html#excercise",
+    "title": "7  Statistics, Model Evaluation",
+    "section": "7.3 Excercise",
+    "text": "7.3 Excercise\nEvaluate the model performance from the model created. Select an appropriate confidence level with a ROC curve and create a confusion table. State precision, recall, accuracy, F1 and F2 scores.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Statistics, Model Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_8.html",
+    "href": "chapter_8.html",
+    "title": "8  Reference Manager, Quarto, Reproducible Research",
+    "section": "",
+    "text": "8.1 Reference manager\nIn Zotero, create a collection to store your references for the project. Make sure the Better BibTeX plugin for Zotero is installed. Right click on the collection in Zotero and select ‘export collection’. Next, select Better BibTeX and make sure the ‘keep updated’ box is ticked and save to the project directory as references.bib. This makes sure the file remains updated when you add references to Zotero, without having to ‘re-export’ the collection.\nYou can cite a paper by using the Better BibTex identifier (i.e. wickhamTidyData2014) after an @ sign Wickham (2014).",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Reference Manager, Quarto, Reproducible Research</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_8.html#quarto-project",
+    "href": "chapter_8.html#quarto-project",
+    "title": "8  Reference Manager, Quarto, Reproducible Research",
+    "section": "8.2 Quarto project",
+    "text": "8.2 Quarto project\nTo create Quarto project: https://quarto.org/docs/books.\n\n-&gt; file -&gt; New File -&gt; Quarto Project -&gt; Book (or website etc..)\nYou can edit the _quarto.yml file as desired\n\nTo open the the project:\n\nOpen the directory in MS Visual Studio\n\nTo render the whole book:\n\nrun ‘quarto render’ in terminal\n\nTo render a single qmd file:\n\nopen the file and ‘CMD+Shift+K’",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Reference Manager, Quarto, Reproducible Research</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_8.html#reproducible-research",
+    "href": "chapter_8.html#reproducible-research",
+    "title": "8  Reference Manager, Quarto, Reproducible Research",
+    "section": "8.3 Reproducible research",
+    "text": "8.3 Reproducible research\nPlease refer to Reproducible research\nPlease refer to Rules\nDocument all the software used, including its version.\nList in requirements.txt file\nExample",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Reference Manager, Quarto, Reproducible Research</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_8.html#excercise",
+    "href": "chapter_8.html#excercise",
+    "title": "8  Reference Manager, Quarto, Reproducible Research",
+    "section": "8.4 Excercise",
+    "text": "8.4 Excercise\nRender a single PDF and Word Document from the analysis done. The files should contain references and data should be processed within the document. Do not copy and paste any information.\n\n\n\n\nWickham, Hadley. 2014. “Tidy Data.” Journal of Statistical Software 59 (10). https://doi.org/10.18637/jss.v059.i10.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Reference Manager, Quarto, Reproducible Research</span>"
     ]
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "9  Summary",
+    "title": "9  Survey",
     "section": "",
-    "text": "In summary, this book has no content whatsoever.",
+    "text": "Please complete the post course survey to help us make improvements.",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Survey</span>"
     ]
   },
   {

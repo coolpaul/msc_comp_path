@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Chapter 3 – Msc Computational Pathology</title>
+<title>3&nbsp; Data, Storage, Backup, Databases, Dataframes – Msc Computational Pathology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -83,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter_3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 3</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter_3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data, Storage, Backup, Databases, Dataframes</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -117,55 +137,55 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction, setup, legal aspects, coding principles and installation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction, Setup, Legal aspects, Coding Principles and Installation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Chapter 2</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Hardware, Operating Systems, Scanners, File Formats, Software</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_3.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 3</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data, Storage, Backup, Databases, Dataframes</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 4</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 5</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Objects, Labelling, GeoJSON, Annotation formats</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 6</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Model forming</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 7</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Statistics, Model Evaluation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter_8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 8</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reference Manager, Quarto, Reproducible Research</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Survey</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -191,15 +211,51 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#data" id="toc-data" class="nav-link active" data-scroll-target="#data"><span class="header-section-number">3.1</span> Data</a>
+  <ul class="collapse">
+  <li><a href="#numerical" id="toc-numerical" class="nav-link" data-scroll-target="#numerical"><span class="header-section-number">3.1.1</span> Numerical</a></li>
+  <li><a href="#non-numerical" id="toc-non-numerical" class="nav-link" data-scroll-target="#non-numerical"><span class="header-section-number">3.1.2</span> Non Numerical</a></li>
+  <li><a href="#dates" id="toc-dates" class="nav-link" data-scroll-target="#dates"><span class="header-section-number">3.1.3</span> Dates</a></li>
+  </ul></li>
+  <li><a href="#storage" id="toc-storage" class="nav-link" data-scroll-target="#storage"><span class="header-section-number">3.2</span> Storage</a>
+  <ul class="collapse">
+  <li><a href="#file-names" id="toc-file-names" class="nav-link" data-scroll-target="#file-names"><span class="header-section-number">3.2.1</span> File names</a></li>
+  <li><a href="#conventions" id="toc-conventions" class="nav-link" data-scroll-target="#conventions"><span class="header-section-number">3.2.2</span> Conventions</a></li>
+  </ul></li>
+  <li><a href="#backup" id="toc-backup" class="nav-link" data-scroll-target="#backup"><span class="header-section-number">3.3</span> Backup</a>
+  <ul class="collapse">
+  <li><a href="#rsync" id="toc-rsync" class="nav-link" data-scroll-target="#rsync"><span class="header-section-number">3.3.1</span> Rsync</a></li>
+  <li><a href="#raid" id="toc-raid" class="nav-link" data-scroll-target="#raid"><span class="header-section-number">3.3.2</span> RAID</a></li>
+  <li><a href="#off-site" id="toc-off-site" class="nav-link" data-scroll-target="#off-site"><span class="header-section-number">3.3.3</span> Off Site</a></li>
+  </ul></li>
+  <li><a href="#databases" id="toc-databases" class="nav-link" data-scroll-target="#databases"><span class="header-section-number">3.4</span> Databases</a>
+  <ul class="collapse">
+  <li><a href="#flat-file" id="toc-flat-file" class="nav-link" data-scroll-target="#flat-file"><span class="header-section-number">3.4.1</span> Flat File</a></li>
+  <li><a href="#relational-database" id="toc-relational-database" class="nav-link" data-scroll-target="#relational-database"><span class="header-section-number">3.4.2</span> Relational Database</a></li>
+  <li><a href="#extracting-data" id="toc-extracting-data" class="nav-link" data-scroll-target="#extracting-data"><span class="header-section-number">3.4.3</span> Extracting Data</a></li>
+  </ul></li>
+  <li><a href="#dataframes" id="toc-dataframes" class="nav-link" data-scroll-target="#dataframes"><span class="header-section-number">3.5</span> Dataframes</a>
+  <ul class="collapse">
+  <li><a href="#data-types" id="toc-data-types" class="nav-link" data-scroll-target="#data-types"><span class="header-section-number">3.5.1</span> Data types</a></li>
+  <li><a href="#pandas" id="toc-pandas" class="nav-link" data-scroll-target="#pandas"><span class="header-section-number">3.5.2</span> Pandas</a></li>
+  <li><a href="#tidy-data" id="toc-tidy-data" class="nav-link" data-scroll-target="#tidy-data"><span class="header-section-number">3.5.3</span> Tidy data</a></li>
+  <li><a href="#grammar-of-graphics" id="toc-grammar-of-graphics" class="nav-link" data-scroll-target="#grammar-of-graphics"><span class="header-section-number">3.5.4</span> Grammar of graphics</a></li>
+  </ul></li>
+  <li><a href="#excercise" id="toc-excercise" class="nav-link" data-scroll-target="#excercise"><span class="header-section-number">3.6</span> Excercise</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 3</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data, Storage, Backup, Databases, Dataframes</span></h1>
 </div>
 
 
@@ -216,8 +272,160 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="data" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="data"><span class="header-section-number">3.1</span> Data</h2>
+<section id="numerical" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="numerical"><span class="header-section-number">3.1.1</span> Numerical</h3>
+<section id="discrete" class="level4" data-number="3.1.1.1">
+<h4 data-number="3.1.1.1" class="anchored" data-anchor-id="discrete"><span class="header-section-number">3.1.1.1</span> Discrete</h4>
+</section>
+<section id="continuous" class="level4" data-number="3.1.1.2">
+<h4 data-number="3.1.1.2" class="anchored" data-anchor-id="continuous"><span class="header-section-number">3.1.1.2</span> Continuous</h4>
+</section>
+</section>
+<section id="non-numerical" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="non-numerical"><span class="header-section-number">3.1.2</span> Non Numerical</h3>
+<section id="binary" class="level4" data-number="3.1.2.1">
+<h4 data-number="3.1.2.1" class="anchored" data-anchor-id="binary"><span class="header-section-number">3.1.2.1</span> Binary</h4>
+</section>
+<section id="ordinal" class="level4" data-number="3.1.2.2">
+<h4 data-number="3.1.2.2" class="anchored" data-anchor-id="ordinal"><span class="header-section-number">3.1.2.2</span> Ordinal</h4>
+</section>
+<section id="categorical" class="level4" data-number="3.1.2.3">
+<h4 data-number="3.1.2.3" class="anchored" data-anchor-id="categorical"><span class="header-section-number">3.1.2.3</span> Categorical</h4>
+</section>
+</section>
+<section id="dates" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="dates"><span class="header-section-number">3.1.3</span> Dates</h3>
+<p>Parsing dates is often difficult due to difference in notation: 05/11/2026. In America, this is regarded as 11th May, whilst this is 5th November in UK. In similarity with numbers, it is recommended to use the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> standard for dates. The most significant number is on the left.</p>
+</section>
+</section>
+<section id="storage" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="storage"><span class="header-section-number">3.2</span> Storage</h2>
+<section id="file-names" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="file-names"><span class="header-section-number">3.2.1</span> File names</h3>
+<p>Should be accessible via a script, logical structure Avoid spaces!</p>
+</section>
+<section id="conventions" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="conventions"><span class="header-section-number">3.2.2</span> Conventions</h3>
+<section id="snake_case" class="level4" data-number="3.2.2.1">
+<h4 data-number="3.2.2.1" class="anchored" data-anchor-id="snake_case"><span class="header-section-number">3.2.2.1</span> snake_case</h4>
+</section>
+<section id="camelcase" class="level4" data-number="3.2.2.2">
+<h4 data-number="3.2.2.2" class="anchored" data-anchor-id="camelcase"><span class="header-section-number">3.2.2.2</span> camelCase</h4>
+</section>
+<section id="pascalcase" class="level4" data-number="3.2.2.3">
+<h4 data-number="3.2.2.3" class="anchored" data-anchor-id="pascalcase"><span class="header-section-number">3.2.2.3</span> PascalCase</h4>
+</section>
+<section id="others" class="level4" data-number="3.2.2.4">
+<h4 data-number="3.2.2.4" class="anchored" data-anchor-id="others"><span class="header-section-number">3.2.2.4</span> Others</h4>
+</section>
+<section id="naming" class="level4" data-number="3.2.2.5">
+<h4 data-number="3.2.2.5" class="anchored" data-anchor-id="naming"><span class="header-section-number">3.2.2.5</span> Naming</h4>
+<ul>
+<li>Function: verb</li>
+<li>Variable: noun</li>
+<li>Argument: CAPITALS</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="backup" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="backup"><span class="header-section-number">3.3</span> Backup</h2>
+<section id="automated" class="level4" data-number="3.3.0.1">
+<h4 data-number="3.3.0.1" class="anchored" data-anchor-id="automated"><span class="header-section-number">3.3.0.1</span> Automated</h4>
+<p>Best automated as manual not so reliable as you can forget!</p>
+</section>
+<section id="rsync" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="rsync"><span class="header-section-number">3.3.1</span> Rsync</h3>
+<p>Methods for backup, only look at changed files</p>
+</section>
+<section id="raid" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="raid"><span class="header-section-number">3.3.2</span> RAID</h3>
+<p>Not ideal, as in the same housing, in case of fire: all data lost.</p>
+</section>
+<section id="off-site" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="off-site"><span class="header-section-number">3.3.3</span> Off Site</h3>
+<p>Cloud or drives</p>
+</section>
+</section>
+<section id="databases" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="databases"><span class="header-section-number">3.4</span> Databases</h2>
+<section id="flat-file" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="flat-file"><span class="header-section-number">3.4.1</span> Flat File</h3>
+</section>
+<section id="relational-database" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="relational-database"><span class="header-section-number">3.4.2</span> Relational Database</h3>
+</section>
+<section id="extracting-data" class="level3" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="extracting-data"><span class="header-section-number">3.4.3</span> Extracting Data</h3>
+<section id="sql" class="level4" data-number="3.4.3.1">
+<h4 data-number="3.4.3.1" class="anchored" data-anchor-id="sql"><span class="header-section-number">3.4.3.1</span> SQL</h4>
+</section>
+</section>
+</section>
+<section id="dataframes" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="dataframes"><span class="header-section-number">3.5</span> Dataframes</h2>
+<section id="data-types" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="data-types"><span class="header-section-number">3.5.1</span> Data types</h3>
+<ul>
+<li>Numerical
+<ul>
+<li>Integer</li>
+<li>Floating-point number</li>
+<li>Complex number</li>
+</ul></li>
+<li>Collection data types
+<ul>
+<li>Sequential collections
+<ul>
+<li>String (text)</li>
+<li>List</li>
+<li>Tuple</li>
+</ul></li>
+<li>Unordered collection
+<ul>
+<li>Set</li>
+<li>Dictionary</li>
+</ul></li>
+<li>Boolean</li>
+</ul></li>
+</ul>
+</section>
+<section id="pandas" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="pandas"><span class="header-section-number">3.5.2</span> Pandas</h3>
+<p><a href="https://pypi.org/project/pandas/">Pandas</a> stores data in a dataframe. Every dataframe can have one or more variables. A variable can only contain one category (number, categorical, etc), but there can be many variables in a dataframe each of a different type.</p>
+</section>
+<section id="tidy-data" class="level3" data-number="3.5.3">
+<h3 data-number="3.5.3" class="anchored" data-anchor-id="tidy-data"><span class="header-section-number">3.5.3</span> Tidy data</h3>
+<p>Please refer to Hadley Wickham’s paper <span class="citation" data-cites="wickhamTidyData2014">Wickham (<a href="references.html#ref-wickhamTidyData2014" role="doc-biblioref">2014</a>)</span> <a href="papers/tidy-data.pdf">Tidy Data</a> or <a href="https://r4ds.had.co.nz/tidy-data.html" class="uri">https://r4ds.had.co.nz/tidy-data.html</a>.</p>
+</section>
+<section id="grammar-of-graphics" class="level3" data-number="3.5.4">
+<h3 data-number="3.5.4" class="anchored" data-anchor-id="grammar-of-graphics"><span class="header-section-number">3.5.4</span> Grammar of graphics</h3>
+<p>If data are tidy, building plots is usually straight forward using the grammar of graphics.</p>
+<p>Familiarise yourself with the grammar of graphics to build plots <span class="citation" data-cites="wickhamLayeredGrammarGraphics2010a">Wickham (<a href="references.html#ref-wickhamLayeredGrammarGraphics2010a" role="doc-biblioref">2010</a>)</span>. A plot is a graphical representation of the data. It requires a minimum of <a href="https://pcool.dyndns.org/index.php/grammar-of-graphics/">three elements</a>:</p>
+<ul>
+<li>a tidy dataframe</li>
+<li>aesthetic elements</li>
+<li>geometric element(s)</li>
+</ul>
+<p>The dataframe should be in tidy format to allow ggplot (R) or plotnine (Python) to build the plot. The dataframe contains variables that could be numerical or categorical. The geometric element describes what type of plot is required (histogram, regression plot, box and whisker plot) and is related to the aesthetic element. The aesthetic element describes how the data is mapped on the plot. For example, a histogram only requires a x-axis, a regression plot an x- and y-axis, a box and whisker plot a categorical x-axis and a numerical y-axis. Additionally, variables can be allocated to colour, fill, size, transparancy etc. python</p>
+</section>
+</section>
+<section id="excercise" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="excercise"><span class="header-section-number">3.6</span> Excercise</h2>
+<p>TO BE ADDED There are two dataframes in your collection. Link the dataframes and save as a single dataframe. Use this dataframe to create a plot of XXX and YYY.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-wickhamLayeredGrammarGraphics2010a" class="csl-entry" role="listitem">
+Wickham, Hadley. 2010. <span>“A <span>Layered Grammar</span> of <span>Graphics</span>.”</span> <em>Journal of Computational and Graphical Statistics</em> 19 (1): 3–28. <a href="https://doi.org/10.1198/jcgs.2009.07098">https://doi.org/10.1198/jcgs.2009.07098</a>.
+</div>
+<div id="ref-wickhamTidyData2014" class="csl-entry" role="listitem">
+———. 2014. <span>“Tidy <span>Data</span>.”</span> <em>Journal of Statistical Software</em> 59 (10). <a href="https://doi.org/10.18637/jss.v059.i10">https://doi.org/10.18637/jss.v059.i10</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -622,13 +830,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./chapter_2.html" class="pagination-link" aria-label="Chapter 2">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Chapter 2</span></span>
+      <a href="./chapter_2.html" class="pagination-link" aria-label="Hardware, Operating Systems, Scanners, File Formats, Software">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Hardware, Operating Systems, Scanners, File Formats, Software</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./chapter_4.html" class="pagination-link" aria-label="Chapter 4">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 4</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./chapter_4.html" class="pagination-link" aria-label="Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
