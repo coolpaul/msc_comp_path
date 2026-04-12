@@ -5,7 +5,6 @@ import sys
 import openslide
 import numpy as np
 
-# read svs file with openslide
 def read_svs_file_divide_patches(svs_file=None, patch_size=None, level=0, min_pixel_value=150, max_pixel_value=230, output_dir=None):
     '''
     Read svs file and divide into patches
@@ -53,22 +52,23 @@ if __name__ == "__main__":
     input_dir = "../data/wsi/wsi_1/"
     output_dir = "../data/wsi/wsi_1/patches/"
 
+    # store patches in the output_dir, make dir if it doesn't exist
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
     # set patch size
-    patch_size = (512, 512) 
+    patch_size = (1024, 1024) 
 
-    # list svs files in the desktop directory
+    # list svs files in the input directory
     svs_files = os.listdir(input_dir)
 
-    # loop through svs files
+    # loop through svs files in the input directory
     for svs_file in svs_files:
         # check if file is a svs file
         if not svs_file.endswith(".svs"):
             continue
-        full_path = os.path.join(input_dir, svs_file)
-        print(full_path)
+        svs_file = os.path.join(input_dir, svs_file) # add the input dir to the path 
+        print(svs_file)
         # read svs file and divide into patches    
         read_svs_file_divide_patches(svs_file=svs_file, 
                                      patch_size=patch_size, 
