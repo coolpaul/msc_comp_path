@@ -201,13 +201,15 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#legal-aspects" id="toc-legal-aspects" class="nav-link" data-scroll-target="#legal-aspects"><span class="header-section-number">1.3</span> Legal aspects</a></li>
   <li><a href="#coding-principles" id="toc-coding-principles" class="nav-link" data-scroll-target="#coding-principles"><span class="header-section-number">1.4</span> Coding principles</a>
   <ul class="collapse">
-  <li><a href="#why-coding-scripts" id="toc-why-coding-scripts" class="nav-link" data-scroll-target="#why-coding-scripts"><span class="header-section-number">1.4.1</span> why coding / scripts</a></li>
+  <li><a href="#why-coding-scripts" id="toc-why-coding-scripts" class="nav-link" data-scroll-target="#why-coding-scripts"><span class="header-section-number">1.4.1</span> Why coding / scripts</a></li>
+  <li><a href="#principles" id="toc-principles" class="nav-link" data-scroll-target="#principles"><span class="header-section-number">1.4.2</span> Principles</a></li>
   </ul></li>
   <li><a href="#installation-of-software" id="toc-installation-of-software" class="nav-link" data-scroll-target="#installation-of-software"><span class="header-section-number">1.5</span> Installation of software</a>
   <ul class="collapse">
-  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software"><span class="header-section-number">1.5.1</span> Software</a></li>
-  <li><a href="#open-source-software" id="toc-open-source-software" class="nav-link" data-scroll-target="#open-source-software"><span class="header-section-number">1.5.2</span> Open Source Software</a></li>
-  <li><a href="#software-conflicts" id="toc-software-conflicts" class="nav-link" data-scroll-target="#software-conflicts"><span class="header-section-number">1.5.3</span> Software Conflicts</a></li>
+  <li><a href="#open-source-software" id="toc-open-source-software" class="nav-link" data-scroll-target="#open-source-software"><span class="header-section-number">1.5.1</span> Open Source Software</a></li>
+  <li><a href="#software-conflicts" id="toc-software-conflicts" class="nav-link" data-scroll-target="#software-conflicts"><span class="header-section-number">1.5.2</span> Software Conflicts</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation"><span class="header-section-number">1.5.3</span> Installation</a></li>
+  <li><a href="#software-used-in-course" id="toc-software-used-in-course" class="nav-link" data-scroll-target="#software-used-in-course"><span class="header-section-number">1.5.4</span> Software used in Course</a></li>
   </ul></li>
   <li><a href="#ide" id="toc-ide" class="nav-link" data-scroll-target="#ide"><span class="header-section-number">1.6</span> IDE</a></li>
   <li><a href="#excercise" id="toc-excercise" class="nav-link" data-scroll-target="#excercise"><span class="header-section-number">1.7</span> Excercise</a></li>
@@ -250,6 +252,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="coding-principles" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="coding-principles"><span class="header-section-number">1.4</span> Coding principles</h2>
+<section id="why-coding-scripts" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="why-coding-scripts"><span class="header-section-number">1.4.1</span> Why coding / scripts</h3>
+<ul>
+<li>Leave data untouched</li>
+<li>Script is reproducible and documents what has been done (unlike GUI!)</li>
+<li>Use command line interface (CLI)</li>
+</ul>
+</section>
+<section id="principles" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="principles"><span class="header-section-number">1.4.2</span> Principles</h3>
 <ul>
 <li>DRY (don’t repeat yourself)</li>
 <li>KISS (keep is small and simple)</li>
@@ -264,20 +276,33 @@ ul.task-list li input[type="checkbox"] {
 <li>Dependency (Implementation should be dependent on main logic, not the other way round!)</li>
 </ul></li>
 </ul>
-<section id="why-coding-scripts" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" class="anchored" data-anchor-id="why-coding-scripts"><span class="header-section-number">1.4.1</span> why coding / scripts</h3>
-<ul>
-<li>Leave data untouched</li>
-<li>Script is reproducible and documents what has been done (unlike GUI!)</li>
-<li>Use command line interface (CLI)</li>
-</ul>
 </section>
 </section>
 <section id="installation-of-software" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="installation-of-software"><span class="header-section-number">1.5</span> Installation of software</h2>
+<section id="open-source-software" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="open-source-software"><span class="header-section-number">1.5.1</span> Open Source Software</h3>
+<ul>
+<li><p>Propriety (i.e.&nbsp;Philips) has increased costs and you don’t know what has been done</p></li>
+<li><p>Use code and alter to suit particular application</p></li>
+<li><p>Others can see what you have done, open / transparent and improves research by dialogue</p></li>
+<li><p>use csv, or tsv; not xlsx!</p></li>
+</ul>
+</section>
+<section id="software-conflicts" class="level3" data-number="1.5.2">
+<h3 data-number="1.5.2" class="anchored" data-anchor-id="software-conflicts"><span class="header-section-number">1.5.2</span> Software Conflicts</h3>
+<ul>
+<li>Different versions for different tasks</li>
+<li>Conda environments</li>
+<li>Python environments</li>
+</ul>
+</section>
+<section id="installation" class="level3" data-number="1.5.3">
+<h3 data-number="1.5.3" class="anchored" data-anchor-id="installation"><span class="header-section-number">1.5.3</span> Installation</h3>
 <p><a href="./software.html">Install the software to help with the course</a>.</p>
-<section id="software" class="level3" data-number="1.5.1">
-<h3 data-number="1.5.1" class="anchored" data-anchor-id="software"><span class="header-section-number">1.5.1</span> Software</h3>
+</section>
+<section id="software-used-in-course" class="level3" data-number="1.5.4">
+<h3 data-number="1.5.4" class="anchored" data-anchor-id="software-used-in-course"><span class="header-section-number">1.5.4</span> Software used in Course</h3>
 <ul>
 <li>Install <a href="https://www.anaconda.com/docs/getting-started/miniconda/main">Miniconda</a> and create an environment</li>
 <li>Create a conda environment if required</li>
@@ -311,23 +336,6 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li>Install <a href="https://qupath.github.io/">QuPath</a> to view digital histopathology slides</li>
 <li>Install <a href="https://www.zotero.org/">Zotero</a> reference manager</li>
-</ul>
-</section>
-<section id="open-source-software" class="level3" data-number="1.5.2">
-<h3 data-number="1.5.2" class="anchored" data-anchor-id="open-source-software"><span class="header-section-number">1.5.2</span> Open Source Software</h3>
-<ul>
-<li><p>Propriety (i.e.&nbsp;Philips) has increased costs and you don’t know what has been done</p></li>
-<li><p>Use code and alter to suit particular application</p></li>
-<li><p>Others can see what you have done, open / transparent and improves research by dialogue</p></li>
-<li><p>use csv, or tsv; not xlsx!</p></li>
-</ul>
-</section>
-<section id="software-conflicts" class="level3" data-number="1.5.3">
-<h3 data-number="1.5.3" class="anchored" data-anchor-id="software-conflicts"><span class="header-section-number">1.5.3</span> Software Conflicts</h3>
-<ul>
-<li>Different versions for different tasks</li>
-<li>Conda environments</li>
-<li>Python environments</li>
 </ul>
 </section>
 </section>
