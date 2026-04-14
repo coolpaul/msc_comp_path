@@ -7,6 +7,7 @@ import statsmodels.api as sm
 from scipy.stats import chi2_contingency
 from scipy.stats import mannwhitneyu
 from statsmodels.stats.outliers_influence import variance_inflation_factor
+from statsmodels.tools.tools import add_constant
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import NearestNeighbors
 from sklearn.ensemble import RandomForestClassifier
@@ -21,31 +22,67 @@ from IPython.display import display
 from plotnine import ggplot, aes, geom_boxplot, theme_minimal, labs, theme, element_text, scale_fill_manual
 
 def describe_dataframe(df):
-    summary = df.describe(include='all').T  # include='all' handles strings too
-    summary['missing_pct'] = (df.isnull().sum() / len(df)) * 100
-
-    # Correlation Matrix (Numerical Only)
-    num_df = df.select_dtypes(include=['number'])
+    """
+    Comprehensive diagnostic tool for DataFrames.
+    Calculates stats, plots correlations, and prints VIF results internally.
+    """
     
-    if not num_df.empty:
-        corr_matrix = num_df.corr()
+    # Basic Info & Summary Stats 
+    print("\n" + "="*40)
+    print("        DATAFRAME STRUCTURE")
+    print("="*40)
+    df.info()
+    
+    uniques = df.nunique()
+    summary = df.describe(include='all').T
+    summary['missing_pct'] = (df.isnull().sum() / len(df)) * 100
+    
+    # Numerical Data
+    num_df = df.select_dtypes(include=['number'])
+    vif_result = None
+    
+    print("\n" + "="*40)
+    print("      NUMERICAL RELATIONSHIPS")
+    print("="*40)
+    
+    if num_df.shape[1] >= 2:
+        # Plotting Heatmap
         plt.figure(figsize=(10, 8))
-        sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', fmt=".2f")
+        sns.heatmap(num_df.corr(), annot=True, cmap='coolwarm', fmt=".2f")
         plt.title("Correlation Matrix")
         plt.show()
 
-        # VIF Calculation
-        X = num_df.dropna().astype(float) 
-        if X.shape[1] > 1: # VIF needs at least 2 columns
+        # Calculating VIF
+        vif_input = num_df.dropna().astype(float)
+        
+        if not vif_input.empty and vif_input.shape[1] > 1:
+            X = add_constant(vif_input)
             vif_data = pd.DataFrame()
-            vif_data["feature"] = X.columns
-            vif_data["VIF"] = [variance_inflation_factor(X.values, i) for i in range(len(X.columns))]
+            vif_data["feature"] = vif_input.columns
+            # Skip the constant column (index 0) in the VIF calculation
+            vif_data["VIF"] = [variance_inflation_factor(X.values, i) for i in range(1, X.shape[1])]
+            vif_result = vif_data.sort_values(by="VIF", ascending=False)
+            
+            # Print logic
+            print("\nVariance Inflation Factor (VIF):")
+            print(vif_result.to_string(index=False)) 
+            print("\n*Note: VIF > 5-10 indicates high multicollinearity.*")
         else:
-            print("\nNot enough numerical columns for VIF.")
+            vif_result = "Insufficient non-null data for VIF."
+            print(vif_result)
+            
+    elif num_df.shape[1] == 1:
+        print(f"Only one numerical column detected: '{num_df.columns[0]}'.")
+        print("Correlation and VIF require at least two numerical columns.")
     else:
-        print("\nNo numerical columns found for Correlation/VIF.")
-    
-    return df.info(), df.nunique(), summary, vif_data.sort_values(by="VIF", ascending=False) 
+        print("No numerical columns found for analysis.")
+
+    # Return objects for further use
+    return {
+        "uniques": uniques,
+        "summary": summary,
+        "vif": vif_result
+    }
 
 def convert_snake_case(df):
     '''function to convert names in a dataframe to snake case'''
