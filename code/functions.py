@@ -35,7 +35,10 @@ def describe_dataframe(df):
     
     uniques = df.nunique()
     summary = df.describe(include='all').T
-    summary['missing_pct'] = (df.isnull().sum() / len(df)) * 100
+    # Calculate missing percentage per column
+    missing_pcts = (df.isnull().sum() / len(df)) * 100
+    # Use .map() or direct assignment to ensure indices match correctly
+    summary['missing_pct'] = summary.index.map(missing_pcts)
     
     # Numerical Data
     num_df = df.select_dtypes(include=['number'])
@@ -57,19 +60,17 @@ def describe_dataframe(df):
         
         if not vif_input.empty and vif_input.shape[1] > 1:
             X = add_constant(vif_input)
-            vif_data = pd.DataFrame()
-            vif_data["feature"] = vif_input.columns
-            # Skip the constant column (index 0) in the VIF calculation
-            vif_data["VIF"] = [variance_inflation_factor(X.values, i) for i in range(1, X.shape[1])]
-            vif_result = vif_data.sort_values(by="VIF", ascending=False)
             
-            # Print logic
+            # Calculate VIF for each column EXCEPT the constant
+            vif_list = []
+            for i in range(1, X.shape[1]):
+                vif_val = variance_inflation_factor(X.values, i)
+                vif_list.append({"feature": X.columns[i], "VIF": vif_val})
+            
+            # Create DataFrame from the list of dictionaries
+            vif_result = pd.DataFrame(vif_list).sort_values(by="VIF", ascending=False)
             print("\nVariance Inflation Factor (VIF):")
-            print(vif_result.to_string(index=False)) 
-            print("\n*Note: VIF > 5-10 indicates high multicollinearity.*")
-        else:
-            vif_result = "Insufficient non-null data for VIF."
-            print(vif_result)
+            print(vif_result.to_string(index=False))
             
     elif num_df.shape[1] == 1:
         print(f"Only one numerical column detected: '{num_df.columns[0]}'.")
