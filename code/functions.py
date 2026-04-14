@@ -87,7 +87,7 @@ def describe_dataframe(df):
 def convert_snake_case(df):
     '''function to convert names in a dataframe to snake case'''
     df.columns = (df.columns
-        .str.replace('(?<=[a-z])(?=[A-Z])', '_', regex=True) # Handle CamelCase
+        .str.replace('(?<=[a-z])(?=[A-Z])', '_', regex=True) # Handle camelCase
         .str.replace(r'\W+', '_', regex=True)               # Replace non-alphanumeric
         .str.lower()
         .str.strip('_'))
