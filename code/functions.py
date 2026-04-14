@@ -59,16 +59,20 @@ def describe_dataframe(df):
         vif_input = num_df.dropna().astype(float)
         
         if not vif_input.empty and vif_input.shape[1] > 1:
+            # Add the constant
             X = add_constant(vif_input)
             
-            # Calculate VIF for each column EXCEPT the constant
             vif_list = []
-            for i in range(1, X.shape[1]):
-                vif_val = variance_inflation_factor(X.values, i)
-                vif_list.append({"feature": X.columns[i], "VIF": vif_val})
+            # Iterate through the actual names in vif_input
+            for col_name in vif_input.columns:
+                # Calculate VIF using the index of the column in X
+                # X.columns.get_loc(col_name) finds the exact position of BMI, etc.
+                idx = X.columns.get_loc(col_name)
+                vif_val = variance_inflation_factor(X.values, idx)
+                vif_list.append({"feature": col_name, "VIF": vif_val})
             
-            # Create DataFrame from the list of dictionaries
             vif_result = pd.DataFrame(vif_list).sort_values(by="VIF", ascending=False)
+            
             print("\nVariance Inflation Factor (VIF):")
             print(vif_result.to_string(index=False))
             
