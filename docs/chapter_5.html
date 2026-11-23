@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>5&nbsp; Objects, Labelling, GeoJSON, Annotation formats – Msc Computational Pathology</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -34,15 +37,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="./chapter_4.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -208,7 +210,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#pascal-voc" id="toc-pascal-voc" class="nav-link" data-scroll-target="#pascal-voc"><span class="header-section-number">5.4.2</span> Pascal VOC</a></li>
   <li><a href="#yolo" id="toc-yolo" class="nav-link" data-scroll-target="#yolo"><span class="header-section-number">5.4.3</span> YOLO</a></li>
   </ul></li>
-  <li><a href="#excercise" id="toc-excercise" class="nav-link" data-scroll-target="#excercise"><span class="header-section-number">5.5</span> Excercise</a></li>
+  <li><a href="#ground-truth" id="toc-ground-truth" class="nav-link" data-scroll-target="#ground-truth"><span class="header-section-number">5.5</span> Ground truth</a></li>
+  <li><a href="#iou" id="toc-iou" class="nav-link" data-scroll-target="#iou"><span class="header-section-number">5.6</span> IOU</a>
+  <ul class="collapse">
+  <li><a href="#iou-threshold" id="toc-iou-threshold" class="nav-link" data-scroll-target="#iou-threshold"><span class="header-section-number">5.6.1</span> IOU threshold</a></li>
+  </ul></li>
+  <li><a href="#metrics" id="toc-metrics" class="nav-link" data-scroll-target="#metrics"><span class="header-section-number">5.7</span> Metrics</a></li>
+  <li><a href="#excercise" id="toc-excercise" class="nav-link" data-scroll-target="#excercise"><span class="header-section-number">5.8</span> Excercise</a></li>
   </ul>
 </nav>
     </div>
@@ -234,6 +242,11 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><strong>Date: MONDAY, 2027-02-08</strong></p>
+<p><strong>Time: 12:30 - 17:00</strong></p>
+<p><strong>Location: Room 427, PC Lab 3, Institute Of Education, 20 Bedford Way, London WC1H</strong></p>
+<p><strong>Computer Practical</strong></p>
+<p><strong><em>Prof.&nbsp;Paul Cool, Prof.&nbsp;Adrienne Falanagan and Dr.&nbsp;A M Mahedi Hasan</em></strong></p>
 <section id="objects" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="objects"><span class="header-section-number">5.1</span> Objects</h2>
 <p><a href="images/classify_localise_segment.jpg">Types</a></p>
@@ -267,9 +280,40 @@ ul.task-list li input[type="checkbox"] {
 <p>Normalised (0-1) coordinates: [xcenter, ycenter, width, height]</p>
 </section>
 </section>
-<section id="excercise" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="excercise"><span class="header-section-number">5.5</span> Excercise</h2>
-<p>Convert yolo boxes in the <a href="https://github.com/coolpaul/neutrophils">neutrophil repository</a> to Pascal and COCO format.</p>
+<section id="ground-truth" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="ground-truth"><span class="header-section-number">5.5</span> Ground truth</h2>
+<ul>
+<li>Defined ground truth</li>
+<li>Model predictions</li>
+</ul>
+</section>
+<section id="iou" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="iou"><span class="header-section-number">5.6</span> IOU</h2>
+<p>Intersection over Union</p>
+<section id="iou-threshold" class="level3" data-number="5.6.1">
+<h3 data-number="5.6.1" class="anchored" data-anchor-id="iou-threshold"><span class="header-section-number">5.6.1</span> IOU threshold</h3>
+<ul>
+<li>True positive (prediction &gt; iou threshold)</li>
+<li>False positive (prediction &lt; iou threshold)</li>
+<li>False negative (unmatched ground truth)</li>
+<li><em>there are no true negatives for identifications</em></li>
+</ul>
+</section>
+</section>
+<section id="metrics" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="metrics"><span class="header-section-number">5.7</span> Metrics</h2>
+<ul>
+<li>Precision (postive predictive value)</li>
+<li>Recall (sensitivity)</li>
+<li>F1 score; harmonic mean of precision and recall</li>
+<li>Accuracy</li>
+<li>Confusion matrix</li>
+</ul>
+</section>
+<section id="excercise" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="excercise"><span class="header-section-number">5.8</span> Excercise</h2>
+<p>Using the image_patch.jpg image in the <a href="https://github.com/coolpaul/msc_comp_path/tree/main/data/image_patch">image_patch</a> directory, crop the image from center point (1150, 1500) to 550 pixels in both directions. Also, crop the corresponding yolo boxes in ground_truth.txt and predictions.txt and save the files (ground_truth_crop.txt, predictions_crop.txt). This should give you eight box coordinates in the ground_truth_crop.txt file and seven in the predictions_crop.txt file. Show the cropped image with the ground_truth boxes in green and the prediction boxes in yellow.</p>
+<p>Convert the yolo boxes of the ground truth to Pascal format. Using the Pascal format and an IOU threshold of 0.5, count the true positives, false positives and false negatives. Finally, calculate the precision, recall, F1 score and accuracy.</p>
 
 
 </section>

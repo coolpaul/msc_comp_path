@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>7&nbsp; Statistics, Model Evaluation – Msc Computational Pathology</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -34,15 +37,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="./chapter_6.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -232,6 +234,11 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><strong>Date: MONDAY, 2027-03-01</strong></p>
+<p><strong>Time: 12:30 - 17:00</strong></p>
+<p><strong>Location: Room 427, PC Lab 3, Institute Of Education, 20 Bedford Way, London WC1H</strong></p>
+<p><strong>Computer Practical</strong></p>
+<p><strong><em>Prof.&nbsp;Paul Cool, Prof.&nbsp;Adrienne Falanagan and Dr.&nbsp;A M Mahedi Hasan</em></strong></p>
 <section id="statistics" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="statistics"><span class="header-section-number">7.1</span> Statistics</h2>
 <ul>
@@ -240,7 +247,7 @@ ul.task-list li input[type="checkbox"] {
 <li>p value is probability the test statistic takes a more extreme value</li>
 <li>accept or reject null hypothesis</li>
 </ul>
-<p>Check out my paper on <a href="https://pcool.dyndns.org/index.php/p-values-confidence-intervals-their-use-and-abuse/">p values</a></p>
+<p>Check out paper on <a href="https://pcool.dyndns.org/index.php/p-values-confidence-intervals-their-use-and-abuse/">p values</a></p>
 </section>
 <section id="model-evaluation" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="model-evaluation"><span class="header-section-number">7.2</span> Model evaluation</h2>
@@ -261,7 +268,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Accuracy</li>
 <li>Precison (positive predictive value)</li>
 <li>Recall (sensitivity)</li>
-<li>no specificity in object detection!</li>
+<li>No specificity in object detection!</li>
 </ul>
 <p>In object detection: TP, FP and FN, but no TN! - dependent on - confidence - object overlap (50%, or more)</p>
 <p>F1: harmonic mean precision and recall F2: more importance on recall</p>
@@ -281,7 +288,45 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="excercise" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="excercise"><span class="header-section-number">7.3</span> Excercise</h2>
-<p>Evaluate the model performance from the model created. Select an appropriate confidence level with a ROC curve and create a confusion table. State precision, recall, accuracy, F1 and F2 scores.</p>
+<p>Load the <strong>best</strong> YOLO model that was saved in <a href="./chapter_6.html">chapter 6</a> and create predictions with model.predict() on the test set as defined in <a href="./chapter_6.html">chapter 6</a>.</p>
+<ul>
+<li>Save the prediction images</li>
+<li>Calculate the performance metrics on the test set (recall, precision and F1 score)</li>
+<li>Using the model, identify the neutrophils in the <a href="https://github.com/coolpaul/msc_comp_path/tree/main/data/image_patch">image_patch</a>
+<ul>
+<li>on the whole image</li>
+<li>using a ‘sliding window’ technique
+<ul>
+<li>tile size of 96</li>
+<li>stride of 96</li>
+<li>confidence threshold of 0.9</li>
+<li>iou threshold of 0.2</li>
+</ul></li>
+<li>with SAHI <a href="https://github.com/obss/SAHI">sliced Aided Hyper Inference</a>
+<ul>
+<li>slice height = 80</li>
+<li>slice width = 80</li>
+<li>overlap_weight_ratio = 20</li>
+<li>overlap_height_ratio = 20</li>
+<li>non maxmimum supressing</li>
+<li>postprocess_match_metric = “IOU”</li>
+<li>postprocess_match_threshold = 0.30</li>
+</ul></li>
+</ul></li>
+<li>Comment on model performance</li>
+<li>How can the model be improved?</li>
+<li>Demonstration / interaction to use DINO
+<ul>
+<li>model_id = “IDEA-Research/grounding-dino-base”</li>
+<li>processor = AutoProcessor.from_pretrained(model_id)</li>
+<li>model = AutoModelForZeroShotObjectDetection.from_pretrained(model_id)</li>
+<li>device = “mps” if torch.backends.mps.is_available() else “cpu”</li>
+<li>model.to(device)</li>
+<li>text_prompt = “neutrophil . white blood cell . cell with multi-lobed dark purple nucleus . polymorphonuclear leukocyte .”</li>
+<li>conf_threshold = 0.1</li>
+<li>inference_slicer</li>
+</ul></li>
+</ul>
 
 
 </section>

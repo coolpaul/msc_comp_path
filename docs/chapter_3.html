@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>3&nbsp; Data, Storage, Backup, Databases, Dataframes – Msc Computational Pathology</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -24,7 +27,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -54,15 +56,14 @@ div.csl-indent {
 <link href="./chapter_2.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -231,7 +232,8 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#rsync" id="toc-rsync" class="nav-link" data-scroll-target="#rsync"><span class="header-section-number">3.3.1</span> Rsync</a></li>
   <li><a href="#raid" id="toc-raid" class="nav-link" data-scroll-target="#raid"><span class="header-section-number">3.3.2</span> RAID</a></li>
-  <li><a href="#off-site" id="toc-off-site" class="nav-link" data-scroll-target="#off-site"><span class="header-section-number">3.3.3</span> Off Site</a></li>
+  <li><a href="#snapraid" id="toc-snapraid" class="nav-link" data-scroll-target="#snapraid"><span class="header-section-number">3.3.3</span> SnapRAID</a></li>
+  <li><a href="#off-site" id="toc-off-site" class="nav-link" data-scroll-target="#off-site"><span class="header-section-number">3.3.4</span> Off Site</a></li>
   </ul></li>
   <li><a href="#databases" id="toc-databases" class="nav-link" data-scroll-target="#databases"><span class="header-section-number">3.4</span> Databases</a>
   <ul class="collapse">
@@ -272,6 +274,11 @@ div.csl-indent {
 </header>
 
 
+<p><strong>Date: MONDAY, 2027-01-25</strong></p>
+<p><strong>Time: 12:30 - 17:00</strong></p>
+<p><strong>Location: Room 427, PC Lab 3, Institute Of Education, 20 Bedford Way, London WC1H</strong></p>
+<p><strong>Computer Practical</strong></p>
+<p><strong><em>Prof.&nbsp;Paul Cool, Prof.&nbsp;Adrienne Falanagan and Dr.&nbsp;A M Mahedi Hasan</em></strong></p>
 <section id="data" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="data"><span class="header-section-number">3.1</span> Data</h2>
 <section id="numerical" class="level3" data-number="3.1.1">
@@ -344,9 +351,16 @@ div.csl-indent {
 <h3 data-number="3.3.2" class="anchored" data-anchor-id="raid"><span class="header-section-number">3.3.2</span> RAID</h3>
 <p>Not ideal, as in the same housing, in case of fire: all data lost.</p>
 </section>
-<section id="off-site" class="level3" data-number="3.3.3">
-<h3 data-number="3.3.3" class="anchored" data-anchor-id="off-site"><span class="header-section-number">3.3.3</span> Off Site</h3>
-<p>Cloud or drives</p>
+<section id="snapraid" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="snapraid"><span class="header-section-number">3.3.3</span> SnapRAID</h3>
+<ul>
+<li>Formula that summarises all discs on the system.</li>
+</ul>
+</section>
+<section id="off-site" class="level3" data-number="3.3.4">
+<h3 data-number="3.3.4" class="anchored" data-anchor-id="off-site"><span class="header-section-number">3.3.4</span> Off Site</h3>
+<p>Cloud or drives.</p>
+<p>File size and confidentiality.</p>
 </section>
 </section>
 <section id="databases" class="level2" data-number="3.4">
@@ -398,7 +412,7 @@ div.csl-indent {
 </section>
 <section id="tidy-data" class="level3" data-number="3.5.3">
 <h3 data-number="3.5.3" class="anchored" data-anchor-id="tidy-data"><span class="header-section-number">3.5.3</span> Tidy data</h3>
-<p>Please refer to Hadley Wickham’s paper <span class="citation" data-cites="wickhamTidyData2014">Wickham (<a href="references.html#ref-wickhamTidyData2014" role="doc-biblioref">2014</a>)</span> <a href="papers/tidy-data.pdf">Tidy Data</a> or <a href="https://r4ds.had.co.nz/tidy-data.html" class="uri">https://r4ds.had.co.nz/tidy-data.html</a>.</p>
+<p>Please refer to Hadley Wickham’s paper <span class="citation" data-cites="wickhamTidyData2014">Wickham (<a href="references.html#ref-wickhamTidyData2014" role="doc-biblioref">2014</a>)</span> <a href="papers/tidy-data.pdf">Tidy Data</a> or <a href="https://r4ds.had.co.nz/tidy-data.html" class="uri">https://r4ds.had.co.nz/tidy-data.html</a>. Both ‘long’ and ‘wide’ format can be useful and converted from one into the other.</p>
 </section>
 <section id="grammar-of-graphics" class="level3" data-number="3.5.4">
 <h3 data-number="3.5.4" class="anchored" data-anchor-id="grammar-of-graphics"><span class="header-section-number">3.5.4</span> Grammar of graphics</h3>
@@ -414,15 +428,39 @@ div.csl-indent {
 </section>
 <section id="excercise" class="level2" data-number="3.6">
 <h2 data-number="3.6" class="anchored" data-anchor-id="excercise"><span class="header-section-number">3.6</span> Excercise</h2>
-<p>TO BE ADDED There are two dataframes in your collection. Link the dataframes and save as a single dataframe. Use this dataframe to create a plot of XXX and YYY.</p>
+<p>There are four comma separated files (csv files) in the <a href="https://github.com/coolpaul/msc_comp_path/tree/main/data/patient_data">data_data directory</a>.</p>
+<p>These are:</p>
+<ul>
+<li>admissions.csv</li>
+<li>demographics.csv</li>
+<li>follow_up.csv</li>
+<li>genomic.csv</li>
+</ul>
+<p>Import the data into dataframes, clean the data and declare data types appropriately. Subsequently combine (merge) the data into a single dataframe that contains:</p>
+<ul>
+<li>hospital_number</li>
+<li>sex</li>
+<li>diagnosis</li>
+<li>age</li>
+<li>genomic_mutation</li>
+<li>treatment</li>
+<li>follow up in years (fu)</li>
+<li>survival censor; binary (censor)</li>
+<li>follow up to local recurrence in years (fu_lr)</li>
+<li>local recurrence censor; binary (censor_lr)</li>
+<li>bmi.</li>
+</ul>
+<p>Describe the dataframe using the describe_dataframe function in functions.py in the <a href="https://github.com/coolpaul/msc_comp_path/tree/main/code/">code directory</a>.</p>
+<p>Create a survival plot by diagnosis and perform a logrank test.</p>
+<p>Can the BMI be modelled with a normal distribution? Create an appropriate plot to compare BMI by sex and diagnosis and performe the appropriate statistical test.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-wickhamLayeredGrammarGraphics2010a" class="csl-entry" role="listitem">
 Wickham, Hadley. 2010. <span>“A <span>Layered Grammar</span> of <span>Graphics</span>.”</span> <em>Journal of Computational and Graphical Statistics</em> 19 (1): 3–28. <a href="https://doi.org/10.1198/jcgs.2009.07098">https://doi.org/10.1198/jcgs.2009.07098</a>.
 </div>
 <div id="ref-wickhamTidyData2014" class="csl-entry" role="listitem">
-———. 2014. <span>“Tidy <span>Data</span>.”</span> <em>Journal of Statistical Software</em> 59 (10). <a href="https://doi.org/10.18637/jss.v059.i10">https://doi.org/10.18637/jss.v059.i10</a>.
+Wickham, Hadley. 2014. <span>“Tidy <span>Data</span>.”</span> <em>Journal of Statistical Software</em> 59 (10). <a href="https://doi.org/10.18637/jss.v059.i10">https://doi.org/10.18637/jss.v059.i10</a>.
 </div>
 </div>
 </section>

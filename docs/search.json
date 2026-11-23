@@ -14,7 +14,7 @@
     "href": "chapter_1.html",
     "title": "1  Introduction, Setup, Legal aspects, Coding Principles and Installation",
     "section": "",
-    "text": "1.1 Introduction",
+    "text": "1.1 Introduction\nDate: MONDAY, 2027-01-11\nTime: 12:30 - 17:00\nLocation: Room 427, PC Lab 3, Institute Of Education, 20 Bedford Way, London WC1H\nComputer Practical\nProf. Paul Cool, Prof. Adrienne Falanagan and Dr. A M Mahedi Hasan",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction, Setup, Legal aspects, Coding Principles and Installation</span>"
     ]
@@ -64,7 +64,7 @@
     "href": "chapter_1.html#ide",
     "title": "1  Introduction, Setup, Legal aspects, Coding Principles and Installation",
     "section": "1.6 IDE",
-    "text": "1.6 IDE\nIntegrated Development Environment (IDE). MS Visual Studio, R Studio, Quarto, Jupyter, PyCharm.",
+    "text": "1.6 IDE\nIntegrated Development Environment (IDE). MS Visual Studio, R Studio, Positron, Quarto, Jupyter, PyCharm.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction, Setup, Legal aspects, Coding Principles and Installation</span>"
     ]
@@ -84,7 +84,7 @@
     "href": "chapter_2.html",
     "title": "2  Hardware, Operating Systems, Scanners, File Formats, Software",
     "section": "",
-    "text": "2.1 Hardware",
+    "text": "2.1 Hardware\nDate: TUESDAY, 2027-01-19\nTime: 12:30 - 17:00\nLocation: Room 427, PC Lab 3, Institute Of Education, 20 Bedford Way, London WC1H\nComputer Practical\nProf. Paul Cool, Prof. Adrienne Falanagan and Dr. A M Mahedi Hasan",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hardware, Operating Systems, Scanners, File Formats, Software</span>"
     ]
@@ -114,7 +114,7 @@
     "href": "chapter_2.html#scanners",
     "title": "2  Hardware, Operating Systems, Scanners, File Formats, Software",
     "section": "2.3 Scanners",
-    "text": "2.3 Scanners\nSeveral scanners are available to scan histology slides. Need to name different ones. Files can be very large and this is dependent on the amount of tissue on the slide. Can easily be 3 - 4 GByte.\n\n2.3.1 Pyramid file structure\nFor example the 3DHistech scanners create mrxs files. An example is included. The advantage is that not the whole slide will need to be downloaded to see a particular patch, but zoom in to what you want to see (ie. google maps). This is particularly useful for diagnostics.\n\n\n2.3.2 Singe file\nLike TIFF and SVS. An example is included. The whole file will need to be downloaded for viewing. The file structure is simpler and this file structure is more suited for machine learning / artificial intelligence where all pixels are required.\n\n\n2.3.3 DICOM\nStandard, but not universal",
+    "text": "2.3 Scanners\nSeveral scanners are available to scan histology slides (Roche, Leica Biostystems, 3DHistech, Hamamatsu, Philips). Files can be very large and this is dependent on the amount of tissue on the slide. Can easily be 3 - 4 GByte.\n\n2.3.1 Pyramid file structure\nFor example the 3DHistech scanners create mrxs files. An example is included. The advantage is that not the whole slide will need to be downloaded to see a particular patch, but zoom in to what you want to see (ie. google maps). This is particularly useful for diagnostics.\n\n\n2.3.2 Singe file\nLike TIFF and SVS. An example is included. The whole file will need to be downloaded for viewing. The file structure is simpler and this file structure is more suited for machine learning / artificial intelligence where all pixels are required.\n\n\n2.3.3 DICOM\nStandard, but not universal",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hardware, Operating Systems, Scanners, File Formats, Software</span>"
     ]
@@ -134,7 +134,7 @@
     "href": "chapter_2.html#excercise",
     "title": "2  Hardware, Operating Systems, Scanners, File Formats, Software",
     "section": "2.5 Excercise",
-    "text": "2.5 Excercise\nOpen the svs file that is included in the course in Qupath. Select a region of interest (ROI) and annotate some osteoclast like giant cells. Export this region of interest as a geojson file. Import the svs file and geojson file in python and show the region of interest. Save this file as a jpg. Also, using the [create_patches.py]{https://github.com/coolpaul/msc_comp_path/tree/main/code} script you have downloaded to your computer, divide the file into patches. Bonus: stich the file patches back together again.",
+    "text": "2.5 Excercise\nOpen the svs file that is included in the course in Qupath. Select a region of interest (ROI) and annotate some osteoclast like giant cells. Export this region of interest as a geojson file. Import the svs file and geojson file in python and show the region of interest. Save this file as a jpg. Also, using the create_patches.py script you have downloaded to your computer, divide the file into patches.\nBonus: Stich the file patches back together again.\nBonus / Demo: Convert the file to DICOM",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hardware, Operating Systems, Scanners, File Formats, Software</span>"
     ]
@@ -144,7 +144,7 @@
     "href": "chapter_3.html",
     "title": "3  Data, Storage, Backup, Databases, Dataframes",
     "section": "",
-    "text": "3.1 Data",
+    "text": "3.1 Data\nDate: MONDAY, 2027-01-25\nTime: 12:30 - 17:00\nLocation: Room 427, PC Lab 3, Institute Of Education, 20 Bedford Way, London WC1H\nComputer Practical\nProf. Paul Cool, Prof. Adrienne Falanagan and Dr. A M Mahedi Hasan",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data, Storage, Backup, Databases, Dataframes</span>"
     ]
@@ -174,7 +174,7 @@
     "href": "chapter_3.html#backup",
     "title": "3  Data, Storage, Backup, Databases, Dataframes",
     "section": "3.3 Backup",
-    "text": "3.3 Backup\n\n3.3.0.1 Automated\nBest automated as manual not so reliable as you can forget!\n\n\n3.3.1 Rsync\nMethods for backup, only look at changed files\n\n\n3.3.2 RAID\nNot ideal, as in the same housing, in case of fire: all data lost.\n\n\n3.3.3 Off Site\nCloud or drives",
+    "text": "3.3 Backup\n\n3.3.0.1 Automated\nBest automated as manual not so reliable as you can forget!\n\n\n3.3.1 Rsync\nMethods for backup, only look at changed files\n\n\n3.3.2 RAID\nNot ideal, as in the same housing, in case of fire: all data lost.\n\n\n3.3.3 SnapRAID\n\nFormula that summarises all discs on the system.\n\n\n\n3.3.4 Off Site\nCloud or drives.\nFile size and confidentiality.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data, Storage, Backup, Databases, Dataframes</span>"
     ]
@@ -194,7 +194,7 @@
     "href": "chapter_3.html#dataframes",
     "title": "3  Data, Storage, Backup, Databases, Dataframes",
     "section": "3.5 Dataframes",
-    "text": "3.5 Dataframes\n\n3.5.1 Data types\n\nNumerical\n\nInteger\nFloating-point number\nComplex number\n\nCollection data types\n\nSequential collections\n\nString (text)\nList\nTuple\n\nUnordered collection\n\nSet\nDictionary\n\nBoolean\n\n\n\n\n3.5.2 Pandas\nPandas stores data in a dataframe. Every dataframe can have one or more variables. A variable can only contain one category (number, categorical, etc), but there can be many variables in a dataframe each of a different type.\n\n\n3.5.3 Tidy data\nPlease refer to Hadley Wickham’s paper Wickham (2014) Tidy Data or https://r4ds.had.co.nz/tidy-data.html.\n\n\n3.5.4 Grammar of graphics\nIf data are tidy, building plots is usually straight forward using the grammar of graphics.\nFamiliarise yourself with the grammar of graphics to build plots Wickham (2010). A plot is a graphical representation of the data. It requires a minimum of three elements:\n\na tidy dataframe\naesthetic elements\ngeometric element(s)\n\nThe dataframe should be in tidy format to allow ggplot (R) or plotnine (Python) to build the plot. The dataframe contains variables that could be numerical or categorical. The geometric element describes what type of plot is required (histogram, regression plot, box and whisker plot) and is related to the aesthetic element. The aesthetic element describes how the data is mapped on the plot. For example, a histogram only requires a x-axis, a regression plot an x- and y-axis, a box and whisker plot a categorical x-axis and a numerical y-axis. Additionally, variables can be allocated to colour, fill, size, transparancy etc. python",
+    "text": "3.5 Dataframes\n\n3.5.1 Data types\n\nNumerical\n\nInteger\nFloating-point number\nComplex number\n\nCollection data types\n\nSequential collections\n\nString (text)\nList\nTuple\n\nUnordered collection\n\nSet\nDictionary\n\nBoolean\n\n\n\n\n3.5.2 Pandas\nPandas stores data in a dataframe. Every dataframe can have one or more variables. A variable can only contain one category (number, categorical, etc), but there can be many variables in a dataframe each of a different type.\n\n\n3.5.3 Tidy data\nPlease refer to Hadley Wickham’s paper Wickham (2014) Tidy Data or https://r4ds.had.co.nz/tidy-data.html. Both ‘long’ and ‘wide’ format can be useful and converted from one into the other.\n\n\n3.5.4 Grammar of graphics\nIf data are tidy, building plots is usually straight forward using the grammar of graphics.\nFamiliarise yourself with the grammar of graphics to build plots Wickham (2010). A plot is a graphical representation of the data. It requires a minimum of three elements:\n\na tidy dataframe\naesthetic elements\ngeometric element(s)\n\nThe dataframe should be in tidy format to allow ggplot (R) or plotnine (Python) to build the plot. The dataframe contains variables that could be numerical or categorical. The geometric element describes what type of plot is required (histogram, regression plot, box and whisker plot) and is related to the aesthetic element. The aesthetic element describes how the data is mapped on the plot. For example, a histogram only requires a x-axis, a regression plot an x- and y-axis, a box and whisker plot a categorical x-axis and a numerical y-axis. Additionally, variables can be allocated to colour, fill, size, transparancy etc. python",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data, Storage, Backup, Databases, Dataframes</span>"
     ]
@@ -204,7 +204,7 @@
     "href": "chapter_3.html#excercise",
     "title": "3  Data, Storage, Backup, Databases, Dataframes",
     "section": "3.6 Excercise",
-    "text": "3.6 Excercise\nTO BE ADDED There are two dataframes in your collection. Link the dataframes and save as a single dataframe. Use this dataframe to create a plot of XXX and YYY.\n\n\n\n\nWickham, Hadley. 2010. “A Layered Grammar of Graphics.” Journal of Computational and Graphical Statistics 19 (1): 3–28. https://doi.org/10.1198/jcgs.2009.07098.\n\n\n———. 2014. “Tidy Data.” Journal of Statistical Software 59 (10). https://doi.org/10.18637/jss.v059.i10.",
+    "text": "3.6 Excercise\nThere are four comma separated files (csv files) in the data_data directory.\nThese are:\n\nadmissions.csv\ndemographics.csv\nfollow_up.csv\ngenomic.csv\n\nImport the data into dataframes, clean the data and declare data types appropriately. Subsequently combine (merge) the data into a single dataframe that contains:\n\nhospital_number\nsex\ndiagnosis\nage\ngenomic_mutation\ntreatment\nfollow up in years (fu)\nsurvival censor; binary (censor)\nfollow up to local recurrence in years (fu_lr)\nlocal recurrence censor; binary (censor_lr)\nbmi.\n\nDescribe the dataframe using the describe_dataframe function in functions.py in the code directory.\nCreate a survival plot by diagnosis and perform a logrank test.\nCan the BMI be modelled with a normal distribution? Create an appropriate plot to compare BMI by sex and diagnosis and performe the appropriate statistical test.\n\n\n\n\nWickham, Hadley. 2010. “A Layered Grammar of Graphics.” Journal of Computational and Graphical Statistics 19 (1): 3–28. https://doi.org/10.1198/jcgs.2009.07098.\n\n\nWickham, Hadley. 2014. “Tidy Data.” Journal of Statistical Software 59 (10). https://doi.org/10.18637/jss.v059.i10.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data, Storage, Backup, Databases, Dataframes</span>"
     ]
@@ -214,7 +214,7 @@
     "href": "chapter_4.html",
     "title": "4  Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation",
     "section": "",
-    "text": "4.1 Images",
+    "text": "4.1 Images\nDate: MONDAY, 2027-02-01\nTime: 12:30 - 17:00\nLocation: Room 427, PC Lab 3, Institute Of Education, 20 Bedford Way, London WC1H\nComputer Practical\nProf. Paul Cool, Prof. Adrienne Falanagan and Dr. A M Mahedi Hasan",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Images, Objects, Convolutional Networks, Processing, Normalization, Augmentation</span>"
     ]
@@ -284,7 +284,7 @@
     "href": "chapter_5.html",
     "title": "5  Objects, Labelling, GeoJSON, Annotation formats",
     "section": "",
-    "text": "5.1 Objects\nTypes",
+    "text": "5.1 Objects\nDate: MONDAY, 2027-02-08\nTime: 12:30 - 17:00\nLocation: Room 427, PC Lab 3, Institute Of Education, 20 Bedford Way, London WC1H\nComputer Practical\nProf. Paul Cool, Prof. Adrienne Falanagan and Dr. A M Mahedi Hasan\nTypes",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Objects, Labelling, GeoJSON, Annotation formats</span>"
     ]
@@ -320,11 +320,41 @@
     ]
   },
   {
+    "objectID": "chapter_5.html#ground-truth",
+    "href": "chapter_5.html#ground-truth",
+    "title": "5  Objects, Labelling, GeoJSON, Annotation formats",
+    "section": "5.5 Ground truth",
+    "text": "5.5 Ground truth\n\nDefined ground truth\nModel predictions",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Objects, Labelling, GeoJSON, Annotation formats</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_5.html#iou",
+    "href": "chapter_5.html#iou",
+    "title": "5  Objects, Labelling, GeoJSON, Annotation formats",
+    "section": "5.6 IOU",
+    "text": "5.6 IOU\nIntersection over Union\n\n5.6.1 IOU threshold\n\nTrue positive (prediction &gt; iou threshold)\nFalse positive (prediction &lt; iou threshold)\nFalse negative (unmatched ground truth)\nthere are no true negatives for identifications",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Objects, Labelling, GeoJSON, Annotation formats</span>"
+    ]
+  },
+  {
+    "objectID": "chapter_5.html#metrics",
+    "href": "chapter_5.html#metrics",
+    "title": "5  Objects, Labelling, GeoJSON, Annotation formats",
+    "section": "5.7 Metrics",
+    "text": "5.7 Metrics\n\nPrecision (postive predictive value)\nRecall (sensitivity)\nF1 score; harmonic mean of precision and recall\nAccuracy\nConfusion matrix",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Objects, Labelling, GeoJSON, Annotation formats</span>"
+    ]
+  },
+  {
     "objectID": "chapter_5.html#excercise",
     "href": "chapter_5.html#excercise",
     "title": "5  Objects, Labelling, GeoJSON, Annotation formats",
-    "section": "5.5 Excercise",
-    "text": "5.5 Excercise\nConvert yolo boxes in the neutrophil repository to Pascal and COCO format.",
+    "section": "5.8 Excercise",
+    "text": "5.8 Excercise\nUsing the image_patch.jpg image in the image_patch directory, crop the image from center point (1150, 1500) to 550 pixels in both directions. Also, crop the corresponding yolo boxes in ground_truth.txt and predictions.txt and save the files (ground_truth_crop.txt, predictions_crop.txt). This should give you eight box coordinates in the ground_truth_crop.txt file and seven in the predictions_crop.txt file. Show the cropped image with the ground_truth boxes in green and the prediction boxes in yellow.\nConvert the yolo boxes of the ground truth to Pascal format. Using the Pascal format and an IOU threshold of 0.5, count the true positives, false positives and false negatives. Finally, calculate the precision, recall, F1 score and accuracy.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Objects, Labelling, GeoJSON, Annotation formats</span>"
     ]
@@ -334,7 +364,7 @@
     "href": "chapter_6.html",
     "title": "6  Model forming",
     "section": "",
-    "text": "6.1 Training\nTraining set used to form model and validation set used between different epochs to tune the training parameters. The test set contains data that are unseen by the model and can be used to assess model performance.",
+    "text": "6.1 Training\nDate: MONDAY, 2027-02-22\nTime: 12:30 - 17:00\nLocation: Room 427, PC Lab 3, Institute Of Education, 20 Bedford Way, London WC1H\nComputer Practical\nProf. Paul Cool, Prof. Adrienne Falanagan and Dr. A M Mahedi Hasan\nTraining set used to form model and validation set used between different epochs to tune the training parameters. The test set contains data that are unseen by the model and can be used to assess model performance.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Model forming</span>"
     ]
@@ -364,7 +394,7 @@
     "href": "chapter_6.html#excercise",
     "title": "6  Model forming",
     "section": "6.3 Excercise",
-    "text": "6.3 Excercise\nTO BE ADDED Create a simple model using the neutrophil repository. Create a training, validation and test set. Train the model and save the weights file.",
+    "text": "6.3 Excercise\nCreate a simple model detecting neutrophils using the images and labels in the neutros directory of data\n\nCreate a training, validation and test set with an 80/10/10 split (random state=42).\nTrain the model with YOLO version 8 nano (yolov8n.pt) weights over 50 epochs with an image size of 80 pixels.\nExtract the confusion matrix included in the summary and calculate precision and recall.\nHow would you describe model performance?",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Model forming</span>"
     ]
@@ -374,7 +404,7 @@
     "href": "chapter_7.html",
     "title": "7  Statistics, Model Evaluation",
     "section": "",
-    "text": "7.1 Statistics\nCheck out my paper on p values",
+    "text": "7.1 Statistics\nDate: MONDAY, 2027-03-01\nTime: 12:30 - 17:00\nLocation: Room 427, PC Lab 3, Institute Of Education, 20 Bedford Way, London WC1H\nComputer Practical\nProf. Paul Cool, Prof. Adrienne Falanagan and Dr. A M Mahedi Hasan\nCheck out paper on p values",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Statistics, Model Evaluation</span>"
     ]
@@ -394,7 +424,7 @@
     "href": "chapter_7.html#model-evaluation",
     "title": "7  Statistics, Model Evaluation",
     "section": "7.2 Model evaluation",
-    "text": "7.2 Model evaluation\n\n7.2.1 Ground Truth\nWhat is correct?\n\n\n7.2.2 IOU\n\nIOU (intersection over Union)\nmean Average Precision (MAP)\n\n\n\n7.2.3 Performance metrics\n\nAccuracy\nPrecison (positive predictive value)\nRecall (sensitivity)\nno specificity in object detection!\n\nIn object detection: TP, FP and FN, but no TN! - dependent on - confidence - object overlap (50%, or more)\nF1: harmonic mean precision and recall F2: more importance on recall\n\n\n7.2.4 ROC curve\nExplain and can be used to set the best confidence level\n\n\n7.2.5 Other metrics\nFor numerical performance: RMSE\n\n\n7.2.6 Confidence intervals\nNot a probability!",
+    "text": "7.2 Model evaluation\n\n7.2.1 Ground Truth\nWhat is correct?\n\n\n7.2.2 IOU\n\nIOU (intersection over Union)\nmean Average Precision (MAP)\n\n\n\n7.2.3 Performance metrics\n\nAccuracy\nPrecison (positive predictive value)\nRecall (sensitivity)\nNo specificity in object detection!\n\nIn object detection: TP, FP and FN, but no TN! - dependent on - confidence - object overlap (50%, or more)\nF1: harmonic mean precision and recall F2: more importance on recall\n\n\n7.2.4 ROC curve\nExplain and can be used to set the best confidence level\n\n\n7.2.5 Other metrics\nFor numerical performance: RMSE\n\n\n7.2.6 Confidence intervals\nNot a probability!",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Statistics, Model Evaluation</span>"
     ]
@@ -404,7 +434,7 @@
     "href": "chapter_7.html#excercise",
     "title": "7  Statistics, Model Evaluation",
     "section": "7.3 Excercise",
-    "text": "7.3 Excercise\nEvaluate the model performance from the model created. Select an appropriate confidence level with a ROC curve and create a confusion table. State precision, recall, accuracy, F1 and F2 scores.",
+    "text": "7.3 Excercise\nLoad the best YOLO model that was saved in chapter 6 and create predictions with model.predict() on the test set as defined in chapter 6.\n\nSave the prediction images\nCalculate the performance metrics on the test set (recall, precision and F1 score)\nUsing the model, identify the neutrophils in the image_patch\n\non the whole image\nusing a ‘sliding window’ technique\n\ntile size of 96\nstride of 96\nconfidence threshold of 0.9\niou threshold of 0.2\n\nwith SAHI sliced Aided Hyper Inference\n\nslice height = 80\nslice width = 80\noverlap_weight_ratio = 20\noverlap_height_ratio = 20\nnon maxmimum supressing\npostprocess_match_metric = “IOU”\npostprocess_match_threshold = 0.30\n\n\nComment on model performance\nHow can the model be improved?\nDemonstration / interaction to use DINO\n\nmodel_id = “IDEA-Research/grounding-dino-base”\nprocessor = AutoProcessor.from_pretrained(model_id)\nmodel = AutoModelForZeroShotObjectDetection.from_pretrained(model_id)\ndevice = “mps” if torch.backends.mps.is_available() else “cpu”\nmodel.to(device)\ntext_prompt = “neutrophil . white blood cell . cell with multi-lobed dark purple nucleus . polymorphonuclear leukocyte .”\nconf_threshold = 0.1\ninference_slicer",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Statistics, Model Evaluation</span>"
     ]
@@ -414,7 +444,7 @@
     "href": "chapter_8.html",
     "title": "8  Reference Manager, Quarto, Reproducible Research",
     "section": "",
-    "text": "8.1 Reference manager\nIn Zotero, create a collection to store your references for the project. Make sure the Better BibTeX plugin for Zotero is installed. Right click on the collection in Zotero and select ‘export collection’. Next, select Better BibTeX and make sure the ‘keep updated’ box is ticked and save to the project directory as references.bib. This makes sure the file remains updated when you add references to Zotero, without having to ‘re-export’ the collection.\nYou can cite a paper by using the Better BibTex identifier (i.e. wickhamTidyData2014) after an @ sign Wickham (2014).",
+    "text": "8.1 Reference manager\nDate: MONDAY, 2027-03-01\nTime: 12:30 - 17:00\nLocation: Room 427, PC Lab 3, Institute Of Education, 20 Bedford Way, London WC1H\nComputer Practical\nProf. Paul Cool, Prof. Adrienne Falanagan and Dr. A M Mahedi Hasan\nIn Zotero, create a collection to store your references for the project. Make sure the Better BibTeX plugin for Zotero is installed. Right click on the collection in Zotero and select ‘export collection’. Next, select Better BibTeX and make sure the ‘keep updated’ box is ticked and save to the project directory as references.bib. This makes sure the file remains updated when you add references to Zotero, without having to ‘re-export’ the collection.\nYou can cite a paper by using the Better BibTex identifier (i.e. wickhamTidyData2014) after an @ sign Wickham (2014).",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Reference Manager, Quarto, Reproducible Research</span>"
     ]
@@ -484,7 +514,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Wickham, Hadley. 2010. “A Layered Grammar of\nGraphics.” Journal of Computational and\nGraphical Statistics 19 (1): 3–28. https://doi.org/10.1198/jcgs.2009.07098.\n\n\n———. 2014. “Tidy Data.” Journal of\nStatistical Software 59 (10). https://doi.org/10.18637/jss.v059.i10.",
+    "text": "Wickham, Hadley. 2010. “A Layered Grammar of\nGraphics.” Journal of Computational and\nGraphical Statistics 19 (1): 3–28. https://doi.org/10.1198/jcgs.2009.07098.\n\n\nWickham, Hadley. 2014. “Tidy Data.”\nJournal of Statistical Software 59 (10). https://doi.org/10.18637/jss.v059.i10.",
     "crumbs": [
       "References"
     ]
