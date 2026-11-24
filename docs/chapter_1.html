@@ -376,7 +376,15 @@ ul.task-list li input[type="checkbox"] {
 <li>the NHS number is <strong>valid</strong></li>
 </ul>
 <p>There are <a href="https://checker.nightfall.ai/uk-nhs-checker">online checkers</a> you can use</p>
-<p>Write a Python function that checks if a NHS number if valid. The function should take a single input (argument), remove spaces or hyphens, check it is 10 digits long and output ‘valid’ or ‘invalid’ as appropriate.</p>
+<p>Write a Python function that checks if a NHS number if valid. The function should take a single input (argument), remove spaces or hyphens, check it is 10 digits long and output ‘VALID’ or ‘INVALID’ as appropriate. If the number is not 10 digits long it should return: The number is not a string of 10 digits, but is X digits long. Try the function on the following numbers:</p>
+<ul>
+<li>987 123 4560</li>
+<li>987 123 4561</li>
+<li>987 123 456</li>
+<li>987 123 4562</li>
+</ul>
+<p>Subsequently, read in the <a href="https://github.com/coolpaul/msc_comp_path/blob/main/data/dummy_data/dummy_data.csv">csv file</a> with dummy data and apply the function to all rows in the data frame. Save the checked data frame as a csv file on your computer.</p>
+<p><em>Please note, to read in a csv file add:</em> <strong><em>?raw=true</em></strong> <em>at the end of the url: ‘https://github.com/coolpaul/msc_comp_path/blob/main/data/dummy_data/dummy_data.csv?raw=true’</em></p>
 
 
 </section>
